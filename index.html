@@ -4,7 +4,8 @@ A. Chen
 Created: 2025-03-01
 Updated: 2025-03-05
 
-The main page and home page of my portfolio website.
+The main page and home page of my portfolio website. 
+Made with HTML, CSS, Bootstrap and some JavaScript.
 
 Will include the following sections:
 - Top menu bar
@@ -14,3 +15,87 @@ Will include the following sections:
 - Project section (project cards that will show modal with details if clicked)
 - Additional section (experiences and other)
 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Home</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Top nav bar, only show on small screen, provide menu button -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top d-lg-none">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- divide the whole screen to menu(in offcanvas) and main content-->
+    <div class="container row p-3 ps-4">
+      <!-- offcanvas nav bar that hides on smaller screen-->
+      <div class="offcanvas-lg offcanvas-start bg-danger p-2 col-lg-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="container mx-auto" style="max-width: 1200px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="container p-4 bg-primary-subtle">
+              <div class="row">
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+              </div>
+              <div class="dropdown mt-3 row">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End of offcanvas nav bar that hides on smaller screen-->
+      <div class="container-fluid col">
+        
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>
+  
+  
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Javascript bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
