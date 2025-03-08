@@ -2,7 +2,7 @@
 css/style.css
 A. Chen
 Created: 2025-03-05
-Updated: 2025-03-07
+Updated: 2025-03-08
 
 Contains styling for the main page and components.
 */
@@ -68,15 +68,15 @@ html, body {
 
 /* Fixed menu section on larger screens */
 @media (min-width: 992px) {
-.fixed-menu {
-    position: sticky;
-    top: 60px;
-    /* left: 0; */
-    /* width: 25%; Adjust width as needed */
-    height: calc(100vh - 60px); /* Full viewport height minus the top offset */
-    overflow-y: auto; 
-    /* Enable vertical scrolling if content overflows */
-}
+    .fixed-menu {
+        position: sticky;
+        top: 60px;
+        /* left: 0; */
+        /* width: 25%; Adjust width as needed */
+        height: calc(100vh - 60px); /* Full viewport height minus the top offset */
+        overflow-y: auto; 
+        /* Enable vertical scrolling if content overflows */
+    }
 }
 
 
