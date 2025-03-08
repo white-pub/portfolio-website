@@ -24,39 +24,84 @@ Will include the following sections:
     <title>Portfolio Home</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+      /* style for only this page or style I am still experimenting on */
+    </style>
   </head>
-  <body>
-    <!-- Top nav bar, only show on small screen, provide menu button -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top d-lg-none">
+  <body class="light-purple">
+
+
+    <!-- Top navbar: menu toggler icon, placeholder button, profile icon -->
+    <nav class="navbar navbar-expand-lg dark-purple fixed-top">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <!-- Menu icon (toggler) -->
+        <button style="border: none;"  class="navbar-toggler  d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>          
+        </button>
+
+        <!-- Place holder (to keep navbar height) - invisible menu icon, never collapse -->
+        <button class="navbar-toggler bg-success d-block invisible"  disabled aria-hidden="true">
+          <span class="navbar-toggler-icon"></span>         
+        </button>
+
+        <!-- profile icon -->
+        <button class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+          <img src="assets\icons\profile-circle-icon.svg" alt="Profile Icon Button">
         </button>
       </div>
     </nav>
 
+    <!-- Profile Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profileModalLabel">Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Profile content goes here -->
+            <p>Profile details...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <!-- place holder so the navbar wont overlap main -->
+    <div class="row container-fluid invisible">
+      <nav class="navbar navbar-expand d-block">
+        <div class="container-fluid">
+          <button class="navbar-toggler bg-danger d-block"  disabled aria-hidden="true">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>         
+          </button>
+        </div>
+      </nav>
+    </div>
+
     <!-- divide the whole screen to menu(in offcanvas) and main content-->
-    <div class="container row p-3 ps-4">
+    <div class="container-fluid mx-0 px-0 d-lg-flex">
       <!-- offcanvas nav bar that hides on smaller screen-->
-      <div class="offcanvas-lg offcanvas-start bg-danger p-2 col-lg-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
-        <div class="container mx-auto" style="max-width: 1200px;">
+      <div class="offcanvas-lg offcanvas-start p-2 fixed-menu" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="container bg-danger mx-auto" style="max-width: 300px;">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <div class="container p-4 bg-primary-subtle">
-              <div class="row">
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-              </div>
-              <div class="dropdown mt-3 row">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <div class="container bg-primary-subtle">
+              <div class="card">
+                <div class="card-header">
+                  Menu
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
                 </ul>
               </div>
             </div>
@@ -65,8 +110,11 @@ Will include the following sections:
         </div>
       </div>
       <!-- End of offcanvas nav bar that hides on smaller screen-->
-      <div class="container-fluid col">
-        
+      
+      <!-- Main content section -->
+      <div class="text-center main-content bg-body-tertiary flex-grow-1">
+        <div class="row">
+        </div>
         <h1>Hello, world!</h1>
         <p>
           123123123123123
@@ -80,11 +128,93 @@ Will include the following sections:
         <p>
           123123123123123
         </p>
-  
-  
+
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>          
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>          
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>          
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>          
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>          
+        <h1>Hello, world!</h1>
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>        
+        <p>
+          123123123123123
+        </p>
       </div>
+      <!-- End of main content -->
+
+      <!-- Placeholder column, only visible on lg and larger screens -->
+      <div class="col-lg-1 d-none d-lg-block bg-secondary invisible"></div>
 
     </div>
+    <!-- End of fixed menu and main content  -->
 
 
 

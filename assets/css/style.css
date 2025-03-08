@@ -2,7 +2,82 @@
 css/style.css
 A. Chen
 Created: 2025-03-05
-Updated: 2025-03-05
+Updated: 2025-03-07
 
 Contains styling for the main page and components.
 */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* colors */
+.light-purple {
+    background-color: #fee7ff;
+}
+
+.dark-purple {
+    background-color: #7e0080;
+}
+
+
+/* .custom-text-color {
+    color: #333333;
+} */
+
+/* .custom-border-color {
+    border-color: #ff0000; 
+} */
+
+/* my menu icon */
+.navbar-toggler-icon {
+    background-image: url('../icons/menu-icon.svg'); 
+    background-repeat: no-repeat; /* Prevent the icon from repeating like default background img*/
+}
+
+/* Remove focus shadow for the navbar toggler button */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* My floating profile icon*/
+.profile-icon {
+    opacity: 0.96;
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    padding-right: 15px;
+}
+
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* profile icon on larger screens */
+@media (min-width: 992px) {
+    .profile-icon {
+        opacity: 0.9;
+    }
+    .profile-icon:hover {
+        opacity: 1; /* Fully opaque on hover */
+    }
+}
+
+/* Fixed menu section on larger screens */
+@media (min-width: 992px) {
+.fixed-menu {
+    position: sticky;
+    top: 60px;
+    /* left: 0; */
+    /* width: 25%; Adjust width as needed */
+    height: calc(100vh - 60px); /* Full viewport height minus the top offset */
+    overflow-y: auto; 
+    /* Enable vertical scrolling if content overflows */
+}
+}
+
+
+
