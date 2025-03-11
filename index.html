@@ -11,7 +11,8 @@ Will include the following sections:
 - Top menu bar
 - Header (Name, title, contact, intro card)
 - Filter button bar (collapsable, sticky top)
-- Skills overview (programming language, frameworks and tools, other skills)
+- Skills overview (programming language, frameworks and tools,
+ other skills)
 - Project section (project cards that will show modal with details if clicked)
 - Additional section (experiences and other)
 -->
@@ -70,9 +71,9 @@ Will include the following sections:
           </div>
         </div>
       </div>
-    </div>    
+    </div>
 
-    <!-- place holder so the navbar wont overlap main -->
+    <!-- place holder bar so the navbar wont overlap main -->
     <div class="row container-fluid invisible">
       <nav class="navbar navbar-expand d-block">
         <div class="container-fluid">
@@ -83,138 +84,216 @@ Will include the following sections:
       </nav>
     </div>
 
-    <!-- divide the whole screen to menu(in offcanvas) and main content-->
     <div class="container-fluid mx-0 px-0 d-lg-flex">
-      <!-- offcanvas nav bar that hides on smaller screen-->
-      <div class="offcanvas-lg offcanvas-start p-2 fixed-menu" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
-        <div class="container bg-danger mx-auto" style="max-width: 300px;">
+      <!-- Offcanvas nav bar that hides on smaller screens -->
+      <div class="offcanvas-lg offcanvas-start p-2 fixed-menu bg-offcanvas col-lg-2" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="container mt-4 px-0">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body">
-            <div class="container bg-primary-subtle">
-              <div class="card">
-                <div class="card-header">
+          <div class="offcanvas-body mx-auto">
+            <!-- Fixed menu card -->
+            <div class="card container fixed-menu border-3 rounded-4">
+              <div class="card-header text-center pt-2 menu-card-header rounded-4 rounded-bottom-0">
                   Menu
+              </div>
+              <div class="card-body align-self-center px-0">
+                <div id="fixed-menu-list" class="list-group list-group-flush">
+                  <a class="list-group-item list-group-item-action" href="#about-me-section">About Me</a>
+                  <a class="list-group-item list-group-item-action" href="#skills-section">Skills</a>
+                  <a class="list-group-item list-group-item-action" href="#projects-section">Projects</a>
+                  <a class="list-group-item list-group-item-action" href="#additional-section">Additional??</a>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                </ul>
+              </div>
+            </div> <!-- End of fixed menu card -->
+          </div> <!-- End of off canvas body -->
+        </div>
+      </div>
+      <!-- End of offcanvas nav bar that hides on smaller screens -->
+    
+      <!-- Main content section -->
+      <div class="text-center flex-grow-1 light-purple">
+        <div class="container-fluid" data-bs-spy="scroll" data-bs-target="#fixed-menu-list" data-bs-smooth-scroll="true" tabindex="0">
+          <!-- Webpage heading -->
+          <div class="row justify-content-center pt-5 pb-4" id="about-me-section">
+            <div class="col-10 col-sm-6">
+              <div class="card rounded">
+                <div class="card-body">
+                  <h1 class="card-title display-3">Home</h1>
+                </div>
               </div>
             </div>
           </div>
-
+          <!-- Just place holder -->
+          <div>
+            <p>Place holder</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+          </div>
+    
+          <!-- Skills section -->
+          <!-- Section heading -->
+          <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="skills-section">
+            <div class="col-8 col-sm-5">
+              <div class="card rounded my-3">
+                <div class="card-body pt-3 pb-2">
+                  <h1 class="card-title">Skills</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Language | Programming language -->
+          <div class="row justify-content-evenly mt-4 pt-2 gy-3 gy-sm-4">
+            <!-- Language card -->
+            <div class="card col-10 col-sm-5 col-md-4 px-0">
+              <div class="card-header text-center">
+                Language
+              </div>
+              <div class="card-body text-start py-2">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item py-1">English (native)</li>
+                  <li class="list-group-item py-1">Chinese (native)</li>
+                  <li class="list-group-item py-1">Taiwanese / Southern Min (Intermediate)</li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of language card -->
+    
+            <!-- Programming language card -->
+            <div class="card col-10 col-sm-5 px-0">
+              <div class="card-header text-center">
+                Programming Language
+              </div>
+              <div class="row card-body text-start py-2">
+                <div class="col-6">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1">C</li>
+                    <li class="list-group-item py-1">Python</li>
+                    <li class="list-group-item py-1">HTML</li>
+                    <li class="list-group-item py-1">R</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1">C++</li>
+                    <li class="list-group-item py-1">SQL</li>
+                    <li class="list-group-item py-1">CSS</li>
+                    <li class="list-group-item py-1">JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End of programming language card -->
+    
+            <!-- Web development card -->
+            <div class="card col-10 col-sm-5 col-md-4 px-0">
+              <div class="card-header text-center">
+                Web Development
+              </div>
+              <div class="card-body text-start py-2">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item py-1">Django (ORM, views, templates, forms, URL routing)</li>
+                  <li class="list-group-item py-1">React</li>
+                  <li class="list-group-item py-1">Bootstrap</li>
+                  <li class="list-group-item py-1">Responsive design</li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of web development card -->
+    
+            <!-- Database card -->
+            <div class="card col-10 col-sm-5 px-0">
+              <div class="card-header text-center">
+                Programming Language
+              </div>
+              <div class="row card-body text-start py-2">
+                <div class="col-6">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1">C</li>
+                    <li class="list-group-item py-1">Python</li>
+                    <li class="list-group-item py-1">HTML</li>
+                    <li class="list-group-item py-1">R</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1">C++</li>
+                    <li class="list-group-item py-1">SQL</li>
+                    <li class="list-group-item py-1">CSS</li>
+                    <li class="list-group-item py-1">JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End of database card -->
+          </div>
+          <!-- End of row: Language | Programming language -->
+    
+          <!-- Just place holder -->
+          <div>
+            <p>Place holder</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+          </div>
+    
+          <!-- Project section -->
+          <!-- Section heading -->
+          <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="projects-section">
+            <div class="col-8 col-sm-5">
+              <div class="card rounded my-3">
+                <div class="card-body pt-3 pb-2">
+                  <h1 class="card-title">Projects</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Just place holder -->
+          <div>
+            <p>Place holder</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+          </div>
+    
+          <!-- Additional section -->
+          <!-- Section heading -->
+          <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="additional-section">
+            <div class="col-8 col-sm-5">
+              <div class="card rounded my-3">
+                <div class="card-body pt-3 pb-2">
+                  <h1 class="card-title">Additional</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Just place holder -->
+          <div style="height: 500px;">
+            <p>Place holder</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+            <p>123123123123123</p>
+          </div>
         </div>
-      </div>
-      <!-- End of offcanvas nav bar that hides on smaller screen-->
-      
-      <!-- Main content section -->
-      <div class="text-center main-content bg-body-tertiary flex-grow-1">
-        <div class="row">
-        </div>
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>
-
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>          
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>          
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>          
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>          
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>          
-        <h1>Hello, world!</h1>
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>        
-        <p>
-          123123123123123
-        </p>
+        <!-- End tag for scroll spy -->
       </div>
       <!-- End of main content -->
 
       <!-- Placeholder column, only visible on lg and larger screens -->
-      <div class="col-lg-1 d-none d-lg-block bg-secondary invisible"></div>
+      <div class="col-lg-1 col-xxl-1 d-none d-lg-block bg-secondary invisible"></div>
 
     </div>
-    <!-- End of fixed menu and main content  -->
+    <!-- End of fixed menu and main content -->
+    
 
 
 

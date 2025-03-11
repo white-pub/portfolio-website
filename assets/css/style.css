@@ -15,6 +15,18 @@ html, body {
 }
 
 /* colors */
+.light-pink{
+    background-color: #fdf0fe;
+}
+
+.section-title-bg{
+    background-color: #E59EDD;
+}
+
+.bg-offcanvas {
+    background-color: #fdf0fe !important; /* Use !important to override Bootstrap styles if necessary */
+}
+
 .light-purple {
     background-color: #fee7ff;
 }
@@ -66,18 +78,87 @@ html, body {
     }
 }
 
+
 /* Fixed menu section on larger screens */
 @media (min-width: 992px) {
     .fixed-menu {
         position: sticky;
-        top: 60px;
-        /* left: 0; */
-        /* width: 25%; Adjust width as needed */
-        height: calc(100vh - 60px); /* Full viewport height minus the top offset */
-        overflow-y: auto; 
-        /* Enable vertical scrolling if content overflows */
+        top: 55px;
+        max-height: calc(100vh - 55px); /* Maximum height to allow scrolling if content overflows */
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        padding: 0; /* remove any default padding */
+    }
+
+    .offcanvas-body {
+        /* padding: 0; Remove any default padding */
+    }
+
+    #fixed-menu-list .list-group-item {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0.5rem 1rem; 
+        font-size: 1rem;
+    }
+
+    #fixed-menu-list .list-group-item a {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
+
+/* Set minimum and maximum widths for the offcanvas section */
+.offcanvas-lg.offcanvas-start {
+    min-width: 160px; /* Minimum width for the offcanvas */
+    max-width: 350px; /* Maximum width for the offcanvas */
+}
+
+/* Control the size and color of the card */
+.fixed-menu .card {
+    width: 70%; /* Default width */
+    max-width: 90%; /* Maximum width as a percentage */
+    min-width: 140px; /* Minimum width in pixels */
+    max-width: 230px; /* Maximum width in pixels (will override 90% if 90% is bigger) */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 0;
+    border-color: #e59edd;
+}
+
+.menu-card-header {
+    font-size: 1.3rem;
+    background-color: #ffe1fcce;
+    color: #630e54;
+    border: none;
+}
+
+/* Card text size */
+/* Ensure the button text shrinks if it won't fit in one line */
+    #fixed-menu-list .list-group-item {
+    font-size: 1rem; /* Default font size */
+
+}
+
+/* Card text size - Smaller font size for smaller screens */
+@media (max-width: 991.98px) {
+    #fixed-menu-list .list-group-item {
+        font-size: 0.875rem; 
+    }
+}
+
+/* (fixed menu) Scrollspy Active Link Styles */
+.list-group-item.active {
+    background-color: #a33da5; /* Replace with your desired background color */
+    color: #fff3ff; 
+    border-color: #944a95; /* Replace with your desired border color */
+}
+
+
+  
+  
+  
 
 
 
