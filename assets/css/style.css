@@ -58,8 +58,8 @@ html, body {
 /* My floating profile icon*/
 .profile-icon {
     opacity: 0.96;
-    border: none; /* Remove default button border */
-    background: none; /* Remove default button background */
+    border: none;
+    background: none;
     padding-right: 15px;
 }
 
@@ -79,6 +79,31 @@ html, body {
 }
 
 
+/* My info icon for tooltip */
+.info-icon {
+    border: none;
+    background: none;
+    display: inline-flex; /* Ensure proper alignment */
+    align-items: center; /* Vertically center the content */
+    padding: 0 0.3rem 0.2rem 0.3rem;
+}
+
+.info-icon img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Align the image vertically */
+}
+
+/* Info btn with text for tooltip */
+.info-btn {
+    font-size: 1rem;
+    background-color: #973699;
+    color: #fdf0fe;
+    display: inline-flex; /* Ensure proper alignment */
+    align-items: center; /* Vertically center the content */
+    padding: 0 0.3rem 0.1rem; 
+}
+
 /* Fixed menu section on larger screens */
 @media (min-width: 992px) {
     .fixed-menu {
@@ -86,12 +111,9 @@ html, body {
         top: 55px;
         max-height: calc(100vh - 55px); /* Maximum height to allow scrolling if content overflows */
         overflow-y: auto; /* Enable vertical scrolling if content overflows */
-        padding: 0; /* remove any default padding */
+        padding: 0;
     }
 
-    .offcanvas-body {
-        /* padding: 0; Remove any default padding */
-    }
 
     #fixed-menu-list .list-group-item {
         white-space: nowrap;
@@ -136,7 +158,7 @@ html, body {
 
 /* Card text size */
 /* Ensure the button text shrinks if it won't fit in one line */
-    #fixed-menu-list .list-group-item {
+#fixed-menu-list .list-group-item {
     font-size: 1rem; /* Default font size */
 
 }
@@ -150,9 +172,9 @@ html, body {
 
 /* (fixed menu) Scrollspy Active Link Styles */
 .list-group-item.active {
-    background-color: #a33da5; /* Replace with your desired background color */
+    background-color: #a33da5;
     color: #fff3ff; 
-    border-color: #944a95; /* Replace with your desired border color */
+    border-color: #944a95;
 }
 
 
