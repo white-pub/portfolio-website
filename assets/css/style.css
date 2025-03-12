@@ -78,6 +78,41 @@ html, body {
     }
 }
 
+/* Contact buttons */
+.contact-icon{
+    display: inline-flex; /* Ensure proper alignment */
+    align-items: center; /* Vertically center the content */
+    padding: clamp(5px, 0.2rem, 10px);
+    border-width: 0.2rem;
+}
+
+.contact-icon img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; /* Align the image vertically */
+    margin: 0;
+}
+
+.github-icon{
+    color: #111111;
+    border-color: #d1d0d0;
+    background-color: #ffffff;
+}
+
+.linkedin-icon{
+    color: #0b2950;
+    background-color: #f7fbff;
+    border-color: #98bdf5;
+}
+
+.email-icon{
+    color: #3d0101;
+    background-color: #fdfdfc;
+    border-color: #f5a573;
+}
+
+
+
 
 /* My info icon for tooltip */
 .info-icon {
