@@ -31,11 +31,11 @@ Will include the following sections:
       /* style for only this page or style I am still experimenting on */
     </style>
   </head>
-  <body class="light-purple">
+  <body class="bg-light-purple">
 
 
     <!-- Top navbar: menu toggler icon, placeholder button, profile icon -->
-    <nav class="navbar navbar-expand-lg dark-purple fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark-purple fixed-top">
       <div class="container-fluid">
         <!-- Menu icon (toggler) -->
         <button style="border: none;"  class="navbar-toggler  d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -113,42 +113,69 @@ Will include the following sections:
       <!-- End of offcanvas nav bar that hides on smaller screens -->
     
       <!-- Main content section -->
-      <div class="text-center flex-grow-1 light-purple">
+      <div class="text-center flex-grow-1 bg-light-purple">
         <div class="container-fluid" data-bs-spy="scroll" data-bs-target="#fixed-menu-list" data-bs-smooth-scroll="true" tabindex="0">
           <!-- Webpage heading -->
-          <div class="row justify-content-center pt-5 pb-4" id="about-me-section">
+          <div class="row justify-content-center pt-5 pb-2" id="about-me-section">
             <div class="col-10 col-sm-6">
-              <div class="card rounded">
+              <div class="card bg-transparent border-0" >
                 <div class="card-body">
-                  <h1 class="card-title display-3">A. Chen</h1>
+                  <h1 class="card-title display-3 dark-purple fw-semibold">A. Chen</h1>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- Contact buttons (linkedIn, Github, email)-->
           <div class="row justify-content-center">
-            <div class=" col-10 col-sm-9 col-lg-7 col-xl-6 d-flex justify-content-evenly">
+            <div class=" col-8 col-sm-9 col-lg-7 col-xl-6 d-flex justify-content-around bg-dark-purple py-3 rounded-4">
               <!-- GitHub button -->
               <a href="https://github.com/white-pub" class="btn btn-primary contact-icon github-icon" target="_blank">
                 <img src="assets\icons\github-icon.svg" alt="button with link to my github page" class="bg-white rounded-1">
                 <!-- Text (hidden on small screens) -->
-                <span class="d-none d-sm-inline px-2">GitHub</span>
+                <span class="d-none d-sm-inline px-2 fw-medium">GitHub</span>
               </a>
               <!-- Linkedin button -->
               <a href="https://www.linkedin.com/in/anna-chen-67256a2a2" class="btn btn-primary contact-icon linkedin-icon" target="_blank">
                 <img src="assets\icons\linkedin-icon.svg" alt="button with link to my linkedIn page" class="bg-white px-1 rounded-1">
                 <!-- Text (hidden on small screens) -->
-                <span class="d-none d-sm-inline ps-2 pe-1">LinkedIn</span>
+                <span class="d-none d-sm-inline ps-2 pe-1 fw-medium">LinkedIn</span>
               </a>
               <!-- Email button -->
               <a id="emailButton" href="#" class="btn btn-primary contact-icon email-icon" target="_blank" data-bs-toggle="popover" title="Contact information">
                 <img src="assets\icons\gmail-icon.svg" alt="button with link to my email" class="bg-white px-1 rounded-1">
                 <!-- Text (hidden on small screens) -->
-                <span class="d-none d-sm-inline px-2">Email</span>
+                <span class="d-none d-sm-inline px-2 fw-medium">Email</span>
               </a>
             </div>
 
           </div>
+          <!-- End of Contact buttons row -->
+
+          <!-- Short self-introduction card -->
+          <div class="row justify-content-center my-4">
+            <div class="col-10 col-md-8 col-xxl-7 bg-danger ">
+              <div class="card text-center">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                  2 days ago
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
           <!-- Just place holder -->
           <div>
             <p>Place holder</p>

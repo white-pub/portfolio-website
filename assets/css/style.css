@@ -15,7 +15,7 @@ html, body {
 }
 
 /* colors */
-.light-pink{
+.bg-light-pink{
     background-color: #fdf0fe;
 }
 
@@ -24,25 +24,22 @@ html, body {
 }
 
 .bg-offcanvas {
-    background-color: #fdf0fe !important; /* Use !important to override Bootstrap styles if necessary */
+    background-color: #fdf0fe !important; /* Use !important to override Bootstrap styles*/
 }
 
-.light-purple {
+.bg-light-purple {
     background-color: #fee7ff;
 }
 
-.dark-purple {
+.bg-dark-purple {
     background-color: #7e0080;
 }
 
+.dark-purple {
+    color: #7e0080;
+}
 
-/* .custom-text-color {
-    color: #333333;
-} */
 
-/* .custom-border-color {
-    border-color: #ff0000; 
-} */
 
 /* my menu icon */
 .navbar-toggler-icon {
