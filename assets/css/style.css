@@ -16,29 +16,32 @@ html, body {
 
 /* colors */
 .bg-light-pink{
-    background-color: #fdf0fe;
+    background-color: #f6f0fe;
 }
 
 .section-title-bg{
-    background-color: #E59EDD;
+    background-color: #ba9ee5;
 }
 
 .bg-offcanvas {
-    background-color: #fdf0fe !important; /* Use !important to override Bootstrap styles*/
+    background-color: #f7f0fe !important; /* Use !important to override Bootstrap styles*/
 }
 
 .bg-light-purple {
-    background-color: #fee7ff;
+    background-color: #f3e7ff;
 }
 
 .bg-dark-purple {
-    background-color: #7e0080;
+    background-color: #530080;
 }
 
 .dark-purple {
-    color: #7e0080;
+    color: #3e0080;
 }
 
+.light-pink{
+    color: #fdf0fe;
+}
 
 
 /* my menu icon */
@@ -108,7 +111,40 @@ html, body {
     border-color: #f5a573;
 }
 
+/* Learn more btn */
+.learn-more-btn {
+    background-color: #f1e4ff;
+    color: #3f0d71;
+    border-color: #8725d8;
+}
 
+.filter-btn {
+    background-color: #f3e6ff;
+    color: #4509a7;
+    border-color: #6c27c7;
+    margin: 0.3rem 0.1rem; /* Adjust the value as needed */
+}
+
+.filter-btn a{
+    all: unset; /* Resets all inherited styles for the <a> tag */
+    display: inline; /* Optionally set the default display property */
+    color: inherit; /* Make the link use the text color of its parent */
+    text-decoration: none; /* Remove underlines */
+}
+
+.filter-btn:hover {
+    background-color: #8d35e0;
+    color: #faf7ff;
+    border-color: #fff2ddf8;
+    margin: 0.3rem 0.1rem; /* Adjust the value as needed */
+}
+
+.filter-btn.active {
+    background-color: #781bbf;
+    color: #faf4ff;
+    border-color: #ca84ff51;
+}
+  
 
 
 /* My info icon for tooltip */
@@ -129,8 +165,8 @@ html, body {
 /* Info btn with text for tooltip */
 .info-btn {
     font-size: 1rem;
-    background-color: #973699;
-    color: #fdf0fe;
+    background-color: #643699;
+    color: #f7f0fe;
     display: inline-flex; /* Ensure proper alignment */
     align-items: center; /* Vertically center the content */
     padding: 0 0.3rem 0.1rem; 
@@ -178,13 +214,13 @@ html, body {
     max-width: 230px; /* Maximum width in pixels (will override 90% if 90% is bigger) */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     padding: 0;
-    border-color: #e59edd;
+    border-color: #c49ee5;
 }
 
 .menu-card-header {
     font-size: 1.3rem;
-    background-color: #ffe1fcce;
-    color: #630e54;
+    background-color: #eee1ffce;
+    color: #370e63;
     border: none;
 }
 
@@ -204,15 +240,39 @@ html, body {
 
 /* (fixed menu) Scrollspy Active Link Styles */
 .list-group-item.active {
-    background-color: #a33da5;
-    color: #fff3ff; 
-    border-color: #944a95;
+    background-color: #683da5;
+    color: #faf3ff; 
+    border-color: #724a95;
 }
 
 
-  
-  
-  
+  /* ------------------------------------------ */
 
+/* Filter Icon (div) */
+.sticky-filter-icon {
+    position: sticky; /* Keeps it fixed on the screen */
+    top: 30px; /* Adjust distance from the top of the screen */
+    z-index: 1000; /* Keeps it above other elements */
+    margin-right: 7px;
+}
 
+/* filter icon btns */
+.filter-icon-btn {
+    position: relative;
+    top: 30px;
+    background-color: #f8f0ff;
+    border-color: #5f31a8;
+    border-width: 0.2rem;
+}
 
+.filter-icon-btn img{
+    width: 35px;
+    height: 35px;
+}
+
+.filter-icon-btn:hover {
+    background-color: #fff4dd; /* Darker shade for hover effect */
+    border-color: #6c27c7;
+}
+
+  
