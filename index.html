@@ -685,57 +685,10 @@ Will include the following sections:
 
     <!-- Bootstrap Javascript bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- script.js has the filter function -->
+    <!-- script.js has: filter function, dynamic create email, initialize bootstrap tooltip -->
     <script src="assets/js/script.js"></script>
     <script>
-    // Dynamically create email to avoid bots and scams
-      document.addEventListener("DOMContentLoaded", () => {
-        const emailUser = "a.chen1140110";
-        const emailDomain = "gmail.com";
-        const fullEmail = `${emailUser}@${emailDomain}`;
 
-        // email- plain text in about me modal
-        document.getElementById("email-placeholder").innerHTML = `<span class="fw-bold">${fullEmail}</span>`;
-
-        // email button inside the About me modal
-        const emailMeButton = document.getElementById("emailMeButton");
-        emailMeButton.href = `mailto:${fullEmail}`;
-        emailMeButton.target = "_blank"; // Open in a new tab
-
-        // Prevent default behavior if Email me button is clicked without setting email
-        emailMeButton.addEventListener("click", (event) => {
-          if (!emailMeButton.href.includes("mailto:")) {
-            event.preventDefault();
-          }
-        });
-
-        // Set email content in the popover dynamically (contact btn section)
-        const emailButton = document.getElementById("emailButton");
-        const popover = new bootstrap.Popover(emailButton, {
-          content: `
-            <div>
-              <p>${fullEmail}</p>
-              <a class="btn btn-sm btn-outline-success" href="mailto:${fullEmail}" target="_blank">Send Email</a>
-            </div>
-          `,
-          html: true // Enable HTML content in the popover
-        });
-
-        // Prevent default behavior of the main button (the btn in contact section)
-        emailButton.addEventListener("click", (event) => {
-          event.preventDefault(); // Prevent link navigation
-        });
-      });
-
-      // Initialize bootstrap tooltip
-      document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-      });
-
-
-
-      
     </script>
   </body>
 </html>
