@@ -57,26 +57,21 @@ html, body {
 
 /* My floating profile icon*/
 .profile-icon {
-    opacity: 0.96;
     border: none;
     background: none;
-    padding-right: 15px;
+    padding-right: 13px;
 }
 
 .profile-icon img {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
 }
 
-/* profile icon on larger screens */
-@media (min-width: 992px) {
-    .profile-icon {
-        opacity: 0.9;
-    }
-    .profile-icon:hover {
-        opacity: 1; /* Fully opaque on hover */
-    }
+.profile-icon img:hover {
+    border-radius: 50%;
+    background-color: #ffe44b;
 }
+
 
 /* Contact buttons */
 .contact-icon{
@@ -118,6 +113,34 @@ html, body {
     border-color: #8725d8;
 }
 
+/* Filter Icon (div) */
+.sticky-filter-icon {
+    position: sticky; /* Keeps it fixed on the screen */
+    top: 30px; /* Adjust distance from the top of the screen */
+    z-index: 1000; /* Keeps it above other elements */
+    margin-right: 7px;
+}
+
+/* filter icon btns */
+.filter-icon-btn {
+    position: relative;
+    top: 30px;
+    background-color: #f8f0ff;
+    border-color: #5f31a8;
+    border-width: 0.2rem;
+}
+
+.filter-icon-btn img{
+    width: 35px;
+    height: 35px;
+}
+
+.filter-icon-btn:hover {
+    background-color: #fff4dd; /* Darker shade for hover effect */
+    border-color: #6c27c7;
+}
+
+/* filter buttons */
 .filter-btn {
     background-color: #f3e6ff;
     color: #4509a7;
@@ -248,31 +271,6 @@ html, body {
 
   /* ------------------------------------------ */
 
-/* Filter Icon (div) */
-.sticky-filter-icon {
-    position: sticky; /* Keeps it fixed on the screen */
-    top: 30px; /* Adjust distance from the top of the screen */
-    z-index: 1000; /* Keeps it above other elements */
-    margin-right: 7px;
-}
 
-/* filter icon btns */
-.filter-icon-btn {
-    position: relative;
-    top: 30px;
-    background-color: #f8f0ff;
-    border-color: #5f31a8;
-    border-width: 0.2rem;
-}
-
-.filter-icon-btn img{
-    width: 35px;
-    height: 35px;
-}
-
-.filter-icon-btn:hover {
-    background-color: #fff4dd; /* Darker shade for hover effect */
-    border-color: #6c27c7;
-}
 
   
