@@ -57,15 +57,35 @@ Will include the following sections:
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="profileModalLabel">Profile</h5>
+            <h5 class="modal-title" id="profileModalLabel">Contact me</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <!-- Profile content goes here 🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀 -->
-            <p>Profile details...</p>
+          <div class="modal-body bg-dark-purple m-2 rounded-3">
+            <div class="container-fluid ">
+              <div class="row">
+                <!-- GitHub button -->
+                <a href="https://github.com/white-pub" class="btn btn-light contact-icon github-icon my-2" target="_blank">
+                  <img src="assets\icons\github-icon.svg" alt="button with link to my github page" class="bg-white rounded-1">
+                  <!-- Text (hidden on small screens) -->
+                  <span class="px-2 fw-medium">GitHub</span>
+                </a>
+                <!-- Linkedin button -->
+                <a href="https://www.linkedin.com/in/anna-chen-67256a2a2" class="btn btn-light contact-icon linkedin-icon my-2" target="_blank">
+                  <img src="assets\icons\linkedin-icon.svg" alt="button with link to my linkedIn page" class="bg-white px-1 rounded-1">
+                  <!-- Text (hidden on small screens) -->
+                  <span class="ps-2 pe-1 fw-medium">LinkedIn</span>
+                </a>
+              </div>
+
+              <div id="profile-modal-email-section">
+                <!-- Placeholder for button and text: style handles in javascript-->
+              </div>
+              
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary emailMeButton" href="#">Email me</a>
           </div>
         </div>
       </div>
@@ -101,7 +121,7 @@ Will include the following sections:
                   <a class="list-group-item list-group-item-action" href="#about-me-section">About Me</a>
                   <a class="list-group-item list-group-item-action" href="#skills-section">Skills</a>
                   <a class="list-group-item list-group-item-action" href="#projects-section">Projects</a>
-                  <a class="list-group-item list-group-item-action" href="#additional-section">Additional??</a>
+                  <!-- <a class="list-group-item list-group-item-action" href="#additional-section">Additional??🌀🌀</a> -->
                 </div>
               </div>
             </div> <!-- End of fixed menu card -->
@@ -140,13 +160,12 @@ Will include the following sections:
                 <span class="d-none d-sm-inline ps-2 pe-1 fw-medium">LinkedIn</span>
               </a>
               <!-- Email button -->
-              <a id="emailButton" href="#" class="btn btn-primary contact-icon email-icon" target="_blank" data-bs-toggle="popover" title="Contact information">
+              <a id="popoverEmailButton" href="#" class="btn btn-primary contact-icon email-icon" target="_blank" data-bs-toggle="popover" title="Contact information">
                 <img src="assets\icons\gmail-icon.svg" alt="button with link to my email" class="bg-white px-1 rounded-1">
                 <!-- Text (hidden on small screens) -->
                 <span class="d-none d-sm-inline px-2 fw-medium">Email</span>
               </a>
             </div>
-
           </div>
           <!-- End of Contact buttons row -->
 
@@ -205,25 +224,17 @@ Will include the following sections:
                       <span class="d-inline px-1 my-0 fw-medium">LinkedIn</span>
                     </a>
                     or via email:
-                    <span id="email-placeholder"></span>
+                    <span class="plain-text-email fw-bolder"></span>
                   </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <a id="emailMeButton" class="btn btn-primary" href="#">Email me</a>
+                  <a class="btn btn-primary emailMeButton" href="#">Email me</a>
                 </div>
               </div>
             </div>
-          </div>
+          </div> <!-- End of about me modal -->
 
-          <!-- The filter tags:
-            Frontend
-            Backend
-            Database
-            Data Science  - data-science
-            Software Development - software
-            Hackathon --> 
-            <!-- 🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🧡🧡🧡🧡🧡🧡🧡🌟🌟🌟 ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️-->
           <!-- Floating filter icon -->
           <div class="sticky-filter-icon d-flex justify-content-end my-0"> 
             <button class="btn btn-outline-light filter-icon-btn p-1 rounded-3 shadow" data-bs-toggle="modal" data-bs-target="#filterSectionModal">
@@ -648,9 +659,9 @@ Will include the following sections:
             <p>123123123123123</p>
           </div>
     
-          <!-- Additional section -->
+          <!-- Additional section | empty and hidden for now 🌀🌀🌀🌀🌀🌀 -->
           <!-- Section heading -->
-          <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="additional-section">
+          <!-- <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="additional-section">
             <div class="col-8 col-sm-5">
               <div class="card rounded my-3">
                 <div class="card-body pt-3 pb-2">
@@ -658,7 +669,7 @@ Will include the following sections:
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
     
           <!-- Just place holder -->
           <div style="height: 500px;">

@@ -42,24 +42,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailDomain = "gmail.com";
   const fullEmail = `${emailUser}@${emailDomain}`;
 
-  // email- plain text in about me modal
-  document.getElementById("email-placeholder").innerHTML = `<span class="fw-bold">${fullEmail}</span>`;
+  // Email - plain text (class instead of id, since it's used more then once)
+  const emailPlaceholders = document.querySelectorAll(".plain-text-email"); // Select all elements with the class
 
-  // email button inside the About me modal
-  const emailMeButton = document.getElementById("emailMeButton");
-  emailMeButton.href = `mailto:${fullEmail}`;
-  emailMeButton.target = "_blank"; // Open in a new tab
-
-  // Prevent default behavior if Email me button is clicked without setting email
-  emailMeButton.addEventListener("click", (event) => {
-    if (!emailMeButton.href.includes("mailto:")) {
-      event.preventDefault();
-    }
+  // Insert the email content into each placeholder
+  emailPlaceholders.forEach((placeholder) => {
+    placeholder.innerHTML = `<span>${fullEmail}</span>`;
   });
 
+  // emailMeButton: click to open new page and send email (a class cause used more then once)
+  // Select all buttons with the class "emailMeButton"
+  const emailMeButtons = document.querySelectorAll(".emailMeButton");
+
+  // Apply behavior to each button
+  emailMeButtons.forEach((button) => {
+    // Set the "href" attribute for the mailto link
+    button.href = `mailto:${fullEmail}`;
+    button.target = "_blank"; // Open in a new tab
+
+    // Prevent default behavior if the email is not set
+    button.addEventListener("click", (event) => {
+      if (!button.href.includes("mailto:")) {
+        event.preventDefault();
+      }
+    });
+  });
+
+
   // Set email content in the popover dynamically (contact btn section)
-  const emailButton = document.getElementById("emailButton");
-  const popover = new bootstrap.Popover(emailButton, {
+  const popoverEmailButton = document.getElementById("popoverEmailButton");
+  const popover = new bootstrap.Popover(popoverEmailButton, {
     content: `
       <div>
         <p>${fullEmail}</p>
@@ -70,9 +82,73 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Prevent default behavior of the main button (the btn in contact section)
-  emailButton.addEventListener("click", (event) => {
+  popoverEmailButton.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent link navigation
   });
+});
+
+
+// fine tune the behavior of the email btn section in profile modal
+document.addEventListener("DOMContentLoaded", function () {
+
+  const emailSection = document.getElementById("profile-modal-email-section");
+
+  // Email content
+  const emailUser = "a.chen1140110";
+  const emailDomain = "gmail.com";
+  const fullEmail = `${emailUser}@${emailDomain}`;
+
+  // Function to update layout based on screen size
+  function updateEmailLayout() {
+    const screenWidth = window.innerWidth;
+
+    // Clear the existing content
+    emailSection.innerHTML = "";
+
+    if (screenWidth <= 350) {
+      // Smaller screens: Button with text (takes the whole row)
+      emailSection.innerHTML = `
+        <div class="row mt-2">
+          <a href="mailto:${fullEmail}" class="btn btn-light contact-icon email-icon my-2 fw-medium" target="_blank">
+          <img src="assets/icons/gmail-icon.svg" alt="email icon" class="bg-white px-1 rounded-1 me-2">
+          Email
+        </a>
+        </div>
+
+      `;
+    } else {
+      // Larger screens: button only have icon, show whole email in separate plain text
+      emailSection.innerHTML = `
+        <div class="row ps-2 mt-2 pt-0 rounded-2 align-items-center" style="background-color: rgb(255, 249, 241);">
+          <div class="col-1 p-0">
+            <a href="mailto:${fullEmail}" class="btn btn-light contact-icon email-icon my-2" target="_blank">
+              <img src="assets/icons/gmail-icon.svg" alt="email icon" class="bg-white px-1 rounded-1">
+            </a>
+          </div>
+          <div class="col-10 ps-4 text-center">
+            <span class="plain-text-email fw-medium">${fullEmail}</span>
+          </div>
+        </div>
+      `;
+
+
+      // Adjust text size based on screen width (using `rem`)
+      const plainTextEmail = emailSection.querySelector(".plain-text-email");
+      // if (screenWidth >= 576) {
+      //   plainTextEmail.style.fontSize = "1.2rem";
+      // }
+      if (screenWidth < 500) {
+        plainTextEmail.style.fontSize = "1rem";
+      }
+      if (screenWidth >= 500) {
+        plainTextEmail.style.fontSize = "1.2rem";
+      }
+    }
+  }
+
+  // Run the layout update function on page load and when the screen is resized
+  updateEmailLayout();
+  window.addEventListener("resize", updateEmailLayout);
 });
 
 // Initialize bootstrap tooltip
