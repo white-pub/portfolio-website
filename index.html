@@ -14,7 +14,7 @@ Will include the following sections:
 - Skills overview (programming language, frameworks and tools,
  other skills)
 - Project section (project cards that will show modal with details if clicked)
-- Additional section (experiences and other)
+- Additional section (experiences and other) empty for now, used 🌀🌀 to mark it
 -->
 
 <!doctype html>
@@ -66,13 +66,11 @@ Will include the following sections:
                 <!-- GitHub button -->
                 <a href="https://github.com/white-pub" class="btn btn-light contact-icon github-icon my-2" target="_blank">
                   <img src="assets\icons\github-icon.svg" alt="button with link to my github page" class="bg-white rounded-1">
-                  <!-- Text (hidden on small screens) -->
                   <span class="px-2 fw-medium">GitHub</span>
                 </a>
                 <!-- Linkedin button -->
                 <a href="https://www.linkedin.com/in/anna-chen-67256a2a2" class="btn btn-light contact-icon linkedin-icon my-2" target="_blank">
                   <img src="assets\icons\linkedin-icon.svg" alt="button with link to my linkedIn page" class="bg-white px-1 rounded-1">
-                  <!-- Text (hidden on small screens) -->
                   <span class="ps-2 pe-1 fw-medium">LinkedIn</span>
                 </a>
               </div>
@@ -531,11 +529,47 @@ Will include the following sections:
             </div>
           </div>
 
+          <!-- filter tags: frontend, backend, database, data-science, software, hackathon-->
+          <!-- filter buttons section -->
+          <div class="row justify-content-center mx-4 mb-3" style="background-color: #ead0ff;">
+            <div class="row p-3 pb-2 justify-content-center">
+              <div class="col-12 col-sm-8 col-md-6 col-lg-8 text-center" style="max-width: 400px;">
+                <h6 class="bg-light-pink rounded-3 mx-3 py-2">
+                  Click to filter projects
+                </h6>
+              </div>
+            </div>
+            <div class="col-11 col-sm-9 col-md-8 col-xxl-7 pb-3 rounded-3">
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="all">
+                <a href="#projects-section">All</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="frontend">
+                <a href="#projects-section">Frontend</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="backend">
+                <a href="#projects-section">Backend</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="database">
+                <a href="#projects-section">Database</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="data-science">
+                <a href="#projects-section">DataScience</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="software">
+                <a href="#projects-section">Software</a>
+              </button>
+              <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="hackathon">
+                <a href="#projects-section">Hackathon</a>
+              </button>
+            </div>
+          </div>
+          <!-- End of filter btn section -->
+
           <!-- Project cards row-->
-          <div class="row justify-content-around">
+          <div class="row  justify-content-evenly pt-2 gy-3 gy-sm-4">
 
             <!-- Mini Database Project card -->
-            <div class="card col-10 col-md-6 px-0 rounded-4" data-tags="database">
+            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="database">
               <div class="card-body mx-2">
                 <h5 class="card-title">Oracle-Based Student Housing Database</h5>
                 <p class="card-text text-start">
@@ -555,8 +589,9 @@ Will include the following sections:
                 </li>
               </ul>
               <div class="card-footer">
-                tags and btns
-                
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="database">
+                  <a href="#projects-section">Database</a>
+                </button>
               </div>
             </div>
             <!-- End of Mini Database Project card -->
@@ -641,6 +676,161 @@ Will include the following sections:
             </div>
             <!-- End of Mini Database card Modal -->
 
+            <!-- Herbarium Project card -->
+            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="backend database data-science">
+              <div class="card-body mx-2">
+                <h5 class="card-title">Herbarium Digitization</h5>
+                <p class="card-text text-start">
+                  Led a team to develop a <span class="fw-medium">Django-based web app</span>  connected to a relational database for managing digitized herbarium specimens. The team also designed a standardized scanning pipeline and integrated <span class="fw-medium">AI-powered text recognition</span> to automate data extraction from specimen labels.
+                </p>
+                <!-- Button to trigger card modal -->
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#HerbariumModal">
+                    Learn more
+                  </button>
+                </div>
+              </div> <!-- End of card-body section -->
+              <ul class="list-group list-group-flush mx-2 text-start">
+                <li class="list-group-item fw-medium">
+                  <!-- GitHub button to web app repo-->
+                  <a href="https://github.com/CUNE-Programming/herbarium/" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+                    <img src="assets\icons\github-icon.svg" alt="button with link to web app github page" class="bg-white rounded-1">
+                    <span class="px-2 fw-medium">Web app Repository</span>
+                  </a>
+                  <!-- Github button to OCR repo-->
+                  <a href="https://github.com/white-pub/Plant-Specimen-Text-Extractor" class="btn btn-light contact-icon github-icon my-2" target="_blank">
+                    <img src="assets\icons\github-icon.svg" alt="button with link to web app github page" class="bg-white rounded-1">
+                    <span class="px-2 fw-medium">AI OCR system Repo</span>
+                  </a>
+                </li>
+                <li class="list-group-item fw-medium">
+                  Tech: Relational Database design | Python | Django | AI                
+                  <button type="button" class="btn info-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Optical Character Recognition: Extract text from images">
+                    OCR
+                  </button> | SQLite
+                </li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="backend">
+                  <a href="#projects-section">Backend</a>
+                </button>
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="database">
+                  <a href="#projects-section">Database</a>
+                </button>
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="data-science">
+                  <a href="#projects-section">DataScience</a>
+                </button>
+              </div>
+            </div>
+            <!-- End of Herbarium Project card -->
+
+            <!-- Herbarium card Modal -->
+            <div class="modal fade" id="HerbariumModal" tabindex="-1" aria-labelledby="HerbariumModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content p-3">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-4" id="HerbariumModalLabel">Herbarium Digitization</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <div class="container-fluid d-flex justify-content-center">
+                      <div class="col px-3">
+                        <!-- Tech Stack -->
+                        <div class="row">
+                          <p>
+                            <span class="fw-bold">Tech Stack:</span> 
+                            <span class="fw-medium">Python, Django, 
+                              <a href="https://github.com/RapidAI/RapidOCR" class="btn btn-light info-btn" target="_blank">
+                                <span class="px-1 fw-medium">RapidOCR</span>
+                              </a>
+                              , SQLite
+                            </span> 
+                          </p>
+                        </div>
+                        <!-- link to project repositories -->
+                        <div class="row justify-content-evenly">
+                          <!-- GitHub button to web app repo-->
+                          <a href="https://github.com/CUNE-Programming/herbarium/" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                            <img src="assets\icons\github-icon.svg" alt="button with link to web app github page" class="bg-white rounded-1">
+                            <span class="px-2 fw-medium">Web app Repository</span>
+                          </a>
+                          <!-- Github button to OCR repo-->
+                          <a href="https://github.com/white-pub/Plant-Specimen-Text-Extractor" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                            <img src="assets\icons\github-icon.svg" alt="button with link to web app github page" class="bg-white rounded-1">
+                            <span class="px-2 fw-medium">AI OCR system Repo</span>
+                          </a>
+                        </div>
+                        <!-- Overview -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Overview</h3>
+                          <p>
+                            This project aims to digitize herbarium specimens through three key components:
+                            <ul class="ms-3">
+                              <li><span class="fw-medium">A web platform</span> for cataloging and searching digitized specimens</li>
+                              <li><span class="fw-medium">A standardized scanning pipeline</span> to speed up digitization</li>
+                              <li><span class="fw-medium">An AI-powered OCR system</span> to extract specimen label data</li>
+                            </ul>
+                          </p>
+                        </div>
+                        <!-- Components -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Components</h3>
+                          <h4 class="modal-title fs-6">Web Platform (Django-Based)</h4>
+                          <ul class="ms-3">
+                            <li>Developed a Django web app to store and manage digitized specimen data.</li>
+                            <li>Designed and implemented a <span class="fw-medium">relational database</span> for efficient cataloging and querying.</li>
+                            <li>Built a <span class="fw-medium">responsive UI</span> with Bootstrap to improve accessibility for researchers. <span class="fst-italic">(Work in Progress)</span></li>
+                          </ul>
+                          <h4 class="modal-title fs-6">Standardized Scanning Pipeline</h4>
+                          <ul class="ms-3">
+                            <li>Designed a workflow to balance <span class="fw-medium">scanning speed, image quality, and storage efficiency</span>.</li>
+                            <li>Developed an annotation system to organize specimens more effectively (e.g., numbering large folders before individual specimens for easier retrieval).</li>
+                            <li>Explored different image preprocessing techniques to optimize accuracy and speed.</li>
+                          </ul>
+                          <h4 class="modal-title fs-6">AI-Based Text Recognition</h4>
+                          <ul class="ms-3">
+                            <li>Experimented with various pre-trained machine learning models to find the best fit for the task.</li>
+                            <li>Built an <span class="fw-medium">OCR pipeline</span> to extract text from specimen images.</li>
+                            <li>Integrated 
+                              <a href="https://github.com/RapidAI/RapidOCR" class="btn btn-light info-btn" target="_blank">
+                                <span class="px-1 fw-medium">RapidOCR</span>
+                              </a>
+                              , an open-source, offline-deployable model, to enhance recognition accuracy and speed.
+                            </li>
+                            <li>Applied <span class="fw-medium">image preprocessing techniques</span> (grayscale conversion, noise reduction, contour detection) to improve text clarity.</li>
+                          </ul>
+                        </div>
+                        <!-- Challenges & Solutions -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Challenges & Solutions</h3>
+                          <ul class="ms-3">
+                            <li><span class="fw-medium">Cross-Department Collaboration:</span> Since the herbarium belongs to the biology department while my team is in computer science, clear communication was crucial. We established <span class="fw-medium">documentation and workflow guidelines</span> to streamline collaboration.</li>
+                            <li><span class="fw-medium">Team Coordination:</span> Managed task delegation to maximize efficiency and ensure smooth handoffs between scanning, AI processing, and web development.</li>
+                            <li><span class="fw-medium">Text Recognition Accuracy:</span> While manual transcription was an option, it was time-consuming and prone to errors. Many existing machine learning models had trade-offs in speed, accuracy, cost, or availability. After extensive testing, we selected <span class="fw-medium">RapidOCR</span> for its balance of performance, open-source nature, and offline deployment capabilities.</li>
+                            <li><span class="fw-medium">Scalability:</span> Designed a modular pipeline, allowing future integration of additional models or tools as needed.</li>
+                          </ul>
+                        </div>
+                        <!-- What I Learned -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">What I Learned</h3>
+                          <ul class="ms-3">
+                            <li>Hands-on experience in <span class="fw-medium">web development, AI-based OCR selection process, and database management</span>.</li>
+                            <li><span class="fw-medium">Problem-solving with real-world data</span>, including designing workflows for physical specimens of varying shapes and sizes.</li>
+                            <li>Improved <span class="fw-medium">project management and documentation skills</span> in a multidisciplinary setting.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- End of Modal body -->
+                  <div class="modal-footer justify-content-between">
+                    Jan. 2025 - Present
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Herbarium card Modal -->
+
 
 
 
@@ -649,17 +839,18 @@ Will include the following sections:
 
           </div>
           <!-- End of project card row -->
+
     
           <!-- Just place holder -->
-          <div>
+          <!-- <div>
             <p>Place holder</p>
             <p>123123123123123</p>
             <p>123123123123123</p>
             <p>123123123123123</p>
             <p>123123123123123</p>
-          </div>
+          </div> -->
     
-          <!-- Additional section | empty and hidden for now 🌀🌀🌀🌀🌀🌀 -->
+          <!-- Additional section | empty and hidden for now 🌀🌀 -->
           <!-- Section heading -->
           <!-- <div class="row section-title-bg justify-content-center mt-4 mb-3 mx-4" id="additional-section">
             <div class="col-8 col-sm-5">
@@ -670,15 +861,9 @@ Will include the following sections:
               </div>
             </div>
           </div> -->
-    
-          <!-- Just place holder -->
-          <div style="height: 500px;">
-            <p>Place holder</p>
-            <p>123123123123123</p>
-            <p>123123123123123</p>
-            <p>123123123123123</p>
-            <p>123123123123123</p>
-          </div>
+          <!-- Just place holder for layout -->
+          <div class="row" style="height: 70px;"></div>
+
         </div>
         <!-- End tag for scroll spy -->
       </div>
