@@ -691,7 +691,7 @@ Will include the following sections:
                 </div>
               </div> <!-- End of card-body section -->
               <ul class="list-group list-group-flush mx-2 text-start">
-                <li class="list-group-item fw-medium">
+                <li class="list-group-item fw-medium align-self-center">
                   <!-- GitHub button to web app repo-->
                   <a href="https://github.com/CUNE-Programming/herbarium/" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
                     <img src="assets\icons\github-icon.svg" alt="button with link to web app github page" class="bg-white rounded-1">
@@ -844,7 +844,7 @@ Will include the following sections:
   <div class="card-body mx-2">
     <h5 class="card-title">Bopomofo Character Recognition Model</h5>
     <p class="card-text text-start">
-      Developed a <span class="fw-medium">CNN-based machine learning model</span> to recognize Bopomofo phonetic symbols, trained on both handwritten and computer font datasets. Collected my own data, including handwriting samples from friends and family and open-source computer fonts. Improved model performance through <span class="fw-medium">data augmentation</span> and <span class="fw-medium">preprocessing techniques</span>.
+      Developed a <span class="fw-medium">CNN-based machine learning model</span> to recognize Bopomofo phonetic symbols. Collected my own data, including handwriting samples from friends and family and open-source computer fonts, and improved model robustness through <span class="fw-medium">augmentation techniques</span>. Achieved high accuracy (85-100% for computer fonts, 75-85% for handwritten characters) despite working with a small and imbalanced dataset. 
     </p>
     <!-- Button to trigger card modal -->
     <div class="text-center">
@@ -853,7 +853,15 @@ Will include the following sections:
       </button>
     </div>
   </div> <!-- End of card-body section -->
+
   <ul class="list-group list-group-flush mx-2 text-start">
+    <li class="list-group-item fw-medium align-self-center">
+      <!-- GitHub button to full notebook -->
+      <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+        <img src="assets\icons\github-icon.svg" alt="button with link to full notebook" class="bg-white rounded-1">
+        <span class="px-2 fw-medium">Full notebook</span>
+      </a>
+    </li>
     <li class="list-group-item fw-medium">
       Tech: Python | TensorFlow | OpenCV | Pillow | CNN | Jupyter Notebook
     </li>
@@ -884,21 +892,40 @@ Will include the following sections:
                 <span class="fw-medium">Python, TensorFlow, OpenCV, Pillow, CNN, Jupyter Notebook</span>
               </p>
             </div>
+            <!-- link to project repositories -->
+            <div class="row justify-content-evenly">
+              <!-- GitHub button to full notebook-->
+              <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                <img src="assets\icons\github-icon.svg" alt="button with link to full Notebook on github" class="bg-white rounded-1">
+                <span class="px-2 fw-medium">Full Jupyter Notebook</span>
+              </a>
+              <!-- Github button for project repo-->
+              <a href="https://github.com/white-pub/Bopomofo-Model" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                <img src="assets\icons\github-icon.svg" alt="button with link to project github page" class="bg-white rounded-1">
+                <span class="px-2 fw-medium">Project Repository</span>
+              </a>
+            </div>
             <!-- Overview -->
             <div class="row">
               <h3 class="modal-title fs-5">Overview</h3>
               <p>
-                This project aims to build a machine-learning model that can recognize <span class="fw-medium">individual Bopomofo symbols</span>. Bopomofo is a phonetic character system used in Taiwan. Due to its limited popularity, there hasn't been much research on Bopomofo. To enhance the model's usefulness, I trained it on both computer fonts and handwritten characters, requiring a well-structured dataset and robust training methods to prevent overfitting.
-              </p>
-              <p>
-                The dataset posed significant challenges, as it consisted of only 13 computer fonts with varying weights and two handwritten samples, each character written just once by two individuals. This small and imbalanced dataset required innovative data augmentation and balancing techniques to ensure accurate recognition.
+                This project aims to build a machine-learning model that can recognize <span class="fw-medium">individual Bopomofo symbols</span>. Bopomofo is a phonetic character system used in Taiwan, with limited popularity and research in the machine learning domain. To enhance the model's usefulness, I trained it on both computer fonts and handwritten characters, requiring a well-structured dataset and robust training methods to prevent overfitting.
               </p>
               <p>
                 To achieve accurate recognition, I used a <span class="fw-medium">Convolutional Neural Network (CNN)</span>, a type of deep learning model specifically designed for image processing. CNNs excel at recognizing patterns in images by using multiple layers to detect edges, shapes, and complex features, making them well-suited for distinguishing Bopomofo characters despite variations in handwriting and font styles.
               </p>
+              <p class="mb-1">Despite the constraints of a <span class="fw-medium">small and imbalanced dataset</span>—13 computer fonts with varying weights and two handwritten samples—the model achieved impressive results:</p>
+                <ul class="ms-3 mb-2" style="list-style-type: none;">
+                  <li class="my-0"><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
+                  <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
+                </ul>
+              <p>
+                This highlights the effectiveness of advanced <span class="fw-medium">data augmentation techniques</span> and <span class="fw-medium">balancing strategies</span>. The project demonstrates the feasibility and my ability of achieving high performance in machine learning tasks with limited resources.
+              </p>
             </div>
             <!-- Data Collection & Preparation -->
             <div class="row">
+              <h4 class="my-3">Project Details</h4>
               <h3 class="modal-title fs-5">Data Collection & Preparation</h3>
               <ul class="ms-3">
                 <li>Gathered a <span class="fw-medium">custom dataset</span> by collecting handwriting samples from friends and family.</li>
