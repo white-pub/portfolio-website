@@ -797,7 +797,16 @@ Will include the following sections:
                               </a>
                               , an open-source, offline-deployable model, to enhance recognition accuracy and speed.
                             </li>
-                            <li>Applied <span class="fw-medium">image preprocessing techniques</span> (grayscale conversion, noise reduction, contour detection) to improve text clarity.</li>
+                            <li>Applied <span class="fw-medium">image preprocessing techniques</span> (
+                              <button type="button" class="btn info-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Grayscaling a image can reduce complexity, improved contrast and improve consistency.">
+                                grayscale conversion
+                              </button>
+                              , noise reduction, 
+                              <button type="button" class="btn info-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Detect the borders of objects.">
+                                contour detection
+                              </button>
+                              ) to improve text clarity.
+                            </li>
                           </ul>
                         </div>
                         <!-- Challenges & Solutions -->
@@ -830,12 +839,157 @@ Will include the following sections:
               </div>
             </div>
             <!-- End of Herbarium card Modal -->
+<!-- Bopomofo Model card -->
+<div class="card col-10 col-md-5 px-0 rounded-4" data-tags="data-science">
+  <div class="card-body mx-2">
+    <h5 class="card-title">Bopomofo Character Recognition Model</h5>
+    <p class="card-text text-start">
+      Developed a <span class="fw-medium">CNN-based machine learning model</span> to recognize Bopomofo phonetic symbols, trained on both handwritten and computer font datasets. Collected my own data, including handwriting samples from friends and family and open-source computer fonts. Improved model performance through <span class="fw-medium">data augmentation</span> and <span class="fw-medium">preprocessing techniques</span>.
+    </p>
+    <!-- Button to trigger card modal -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BopomofoModal">
+        Learn more
+      </button>
+    </div>
+  </div> <!-- End of card-body section -->
+  <ul class="list-group list-group-flush mx-2 text-start">
+    <li class="list-group-item fw-medium">
+      Tech: Python | TensorFlow | OpenCV | Pillow | CNN | Jupyter Notebook
+    </li>
+  </ul>
+  <div class="card-footer">
+    <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="data-science">
+      <a href="#projects-section">DataScience</a>
+    </button>
+  </div>
+</div>
+<!-- End of Bopomofo Model card -->
 
-
-
-
-
-
+<!-- Bopomofo card Modal -->
+<div class="modal fade" id="BopomofoModal" tabindex="-1" aria-labelledby="BopomofoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h3 class="modal-title fs-4" id="BopomofoModalLabel">Bopomofo Character Recognition Model</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-start">
+        <div class="container-fluid d-flex justify-content-center">
+          <div class="col px-3">
+            <!-- Tech Stack -->
+            <div class="row">
+              <p>
+                <span class="fw-bold">Tech Stack:</span> 
+                <span class="fw-medium">Python, TensorFlow, OpenCV, Pillow, CNN, Jupyter Notebook</span>
+              </p>
+            </div>
+            <!-- Overview -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Overview</h3>
+              <p>
+                This project aims to build a machine-learning model that can recognize <span class="fw-medium">individual Bopomofo symbols</span>. Bopomofo is a phonetic character system used in Taiwan. Due to its limited popularity, there hasn't been much research on Bopomofo. To enhance the model's usefulness, I trained it on both computer fonts and handwritten characters, requiring a well-structured dataset and robust training methods to prevent overfitting.
+              </p>
+              <p>
+                The dataset posed significant challenges, as it consisted of only 13 computer fonts with varying weights and two handwritten samples, each character written just once by two individuals. This small and imbalanced dataset required innovative data augmentation and balancing techniques to ensure accurate recognition.
+              </p>
+              <p>
+                To achieve accurate recognition, I used a <span class="fw-medium">Convolutional Neural Network (CNN)</span>, a type of deep learning model specifically designed for image processing. CNNs excel at recognizing patterns in images by using multiple layers to detect edges, shapes, and complex features, making them well-suited for distinguishing Bopomofo characters despite variations in handwriting and font styles.
+              </p>
+            </div>
+            <!-- Data Collection & Preparation -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Data Collection & Preparation</h3>
+              <ul class="ms-3">
+                <li>Gathered a <span class="fw-medium">custom dataset</span> by collecting handwriting samples from friends and family.</li>
+                <li>Collected <span class="fw-medium">over a dozen open-source computer fonts</span> to improve generalization.</li>
+                <li>Used the Python library <span class="fw-medium">Pillow</span> to generate individual character images from font files using the ImageFont feature.</li>
+              </ul>
+            </div>
+            <!-- First Attempt -->
+            <div class="row">
+              <h3 class="modal-title fs-5">First Attempt: Early Training Challenges</h3>
+              <p>
+                Initially created training images manually by taking screenshots and splitting them into individual character images.
+              </p>
+              <h4 class="fs-6 fw-medium">Issue:</h4>
+              <ul class="ms-3">
+                <li>The splitting process caused misalignment, leading to <span class="fw-medium">position-dependent bias</span> in training.</li>
+                <li>Model performed better on computer fonts (84%) than handwritten samples (65%), suggesting the need for data augmentation to compensate for the smaller sample size of handwritten fonts.</li>
+                <li>Noticed that <span class="fw-medium">character order in the training set</span> influenced model accuracy—matching order improved accuracy by <span class="fw-medium">10%</span>.</li>
+              </ul>
+            </div>
+            <!-- Second Attempt -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Second Attempt: Improved Training Process</h3>
+              <ul class="ms-3 ps-3"> <!--🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀 -->
+                <li class="my-1">
+                   <span class="fw-medium">Automate dataset creation</span> by generating individual character images from font files. Speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
+                </li>
+                <li class="my-1">Implemented <span class="fw-medium">data augmentation</span> to improve robustness:
+                  <ul>
+                    <li><span class="fw-medium">Randomized image alignment</span> to prevent position memorization.</li>
+                    <li><span class="fw-medium">Contrast adjustments, slant modifications, and blurring</span> to simulate handwriting variations.</li>
+                  </ul>
+                </li>
+                <li class="my-1"><span class="fw-medium">Balanced dataset</span> by categorizing fonts into four types:
+                  <ul>
+                    <li>Even strokes</li>
+                    <li>Dynamic strokes</li>
+                    <li>Heavily stylized fonts</li>
+                    <li>Handwritten samples</li>
+                  </ul>
+                </li>
+                <li class="my-1">Used <span class="fw-medium">OpenCV</span> for augmentation and image processing.</li>                
+                <li class="my-1">
+                  Used Python library Pillow's ImageFont feature to <span class="fw-medium">automate dataset creation</span> by generating individual character images from font files. Greatly speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
+                </li>
+              </ul>
+            </div>
+            <!-- Results & Performance -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Results & Performance</h3>
+              <ul class="ms-3">
+                <li class="my-1">Training epochs reduced from <span class="fw-medium">200</span> to <span class="fw-medium">30</span> while improving accuracy.</li>
+                <li>Model performance:
+                  <ul class="my-1">
+                    <li><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
+                    <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
+                    <li>More off-centered images still lower accuracy but with less bias.</li>
+                  </ul>
+                </li>
+                <li class="my-1">Additional insights:
+                  <ul>
+                    <li>Despite a <span class="fw-medium">small dataset</span> (13 fonts and two handwritten samples), the model achieved <span class="fw-medium">high accuracy rates</span>.</li>
+                    <li>Data augmentation techniques significantly improved model robustness against variations in handwriting and font styles.</li>
+                    <li>Evaluated on entirely new fonts and handwriting samples, the model showcased <span class="fw-medium">excellent generalization</span>, validating its potential for real-world applications.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- What I learned -->
+            <div class="row">
+              <h3 class="modal-title fs-5">What I Learned</h3>
+              <ul class="ms-3">
+                <li>Used Python <span class="fw-medium">Pillow</span> library's ImageFont feature to efficiently generate images of individual characters from font files, significantly improving dataset creation speed and reduce bias.</li>
+                <li>Leveraged <span class="fw-medium">OpenCV</span> for advanced data augmentation techniques to enhance model robustness.</li>
+                <li><span class="fw-medium">Importance of balanced and diverse training data</span> for handwritten recognition.</li>
+                <li><span class="fw-medium">Data augmentation</span> significantly improves model robustness.</li>
+                <li><span class="fw-medium">Structured folder organization</span> and <span class="fw-medium">automated testing setup</span> is crucial to experiment with different methods and quickly iterate.</li>
+                <li><span class="fw-medium">Implemented logging with JSON files</span> and <span class="fw-medium">automated modal evaluation visualization</span> is crucial to experiment with different methods and quickly iterate.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Modal body -->
+      <div class="modal-footer justify-content-between">
+        Nov. 2024 - Dec. 2024
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Bopomofo card Modal -->
 
           </div>
           <!-- End of project card row -->
@@ -861,6 +1015,8 @@ Will include the following sections:
               </div>
             </div>
           </div> -->
+
+          
           <!-- Just place holder for layout -->
           <div class="row" style="height: 70px;"></div>
 
