@@ -273,7 +273,15 @@ html, body {
 
   /* ------------------------------------------ */
 
-
+/* Make the card body flexible to fill the available space */
+.card {
+    display: flex;
+    flex-direction: column; /* Stack card elements vertically */
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Allow the body to expand and fill the available space */
+  }
 
 
   

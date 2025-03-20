@@ -858,7 +858,7 @@ Will include the following sections:
                 </div>
               </div> <!-- End of card-body section -->
               <ul class="list-group list-group-flush mx-2 text-start">
-                <li class="list-group-item fw-medium align-self-center">
+                <li class="list-group-item fw-medium">
                   <!-- GitHub button to full notebook -->
                   <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
                     <img src="assets\icons\github-icon.svg" alt="button with link to full notebook" class="bg-white rounded-1">
@@ -891,7 +891,7 @@ Will include the following sections:
                         <!-- Tech Stack -->
                         <div class="row">
                           <p>
-                            <span class="fw-bold">Tech Stack:</span> 
+                            <span class="fw-bold">Tech:</span> 
                             <span class="fw-medium">Python, Machine Learning, TensorFlow, OpenCV, Pillow, CNN, Jupyter Notebook</span>
                           </p>
                         </div>
@@ -1020,7 +1020,135 @@ Will include the following sections:
               </div>
             </div>
             <!-- End of Bopomofo card Modal -->
-             
+
+            <!-- Bilingual Website card -->
+<div class="card col-10 col-md-5 px-0 rounded-4" data-tags="software frontend">
+  <div class="card-body mx-2">
+    <h5 class="card-title">Responsive Bilingual Website</h5>
+    <p class="card-text text-start">
+      Rebuilt an older personal bilingual website with <span class="fw-medium">responsive design</span>. Implemented <span class="fw-medium">frontend development techniques</span> as well as optimized performance for various devices. My bilingual website has a feature article that introduced Archive of Our Own (AO3). I covering its history, its features, and recommendations for creators on AO3. The bilingual nature of my site makes it accessible for both English and non-English speakers. 
+    </p>
+    <!-- Button to trigger card modal -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BilingualSiteModal">
+        Learn more
+      </button>
+    </div>
+  </div> <!-- End of card-body section -->
+  <ul class="list-group list-group-flush mx-2 text-start">
+    <li class="list-group-item fw-medium">
+      <!-- GitHub button to bilingual site -->
+      <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b55034;">
+        <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
+        <span class="px-2 fw-medium">Bilingual Website</span>
+      </a>
+      <!-- GitHub button to project repository -->
+      <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+        <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
+        <span class="px-2 fw-medium">Repository</span>
+      </a>
+    </li>
+    <li class="list-group-item fw-medium">
+      Tech: HTML | CSS | JavaScript | Responsive Design
+    </li>
+  </ul>
+  <div class="card-footer aline-middle">
+    <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="software frontend">
+      <a href="#projects-section">Software</a>
+    </button>
+    <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="frontend">
+      <a href="#projects-section">Frontend</a>
+    </button>
+  </div>
+</div>
+<!-- End of Bilingual Website card -->
+
+<!-- Bilingual Website card Modal -->
+<div class="modal fade" id="BilingualSiteModal" tabindex="-1" aria-labelledby="BilingualSiteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h3 class="modal-title fs-4" id="BilingualSiteModalLabel">Responsive Bilingual Website</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-start">
+        <div class="container-fluid d-flex justify-content-center">
+          <div class="col px-3">
+            <!-- Tech Stack -->
+            <div class="row">
+              <p>
+                <span class="fw-bold">Tech Stack:</span> 
+                <span class="fw-medium">HTML, CSS, Bootstrap, Github, Responsive Design</span>
+              </p>
+            </div>
+            <!-- GitHub link -->
+            <div class="row justify-content-evenly">
+              <!-- GitHub button to bilingual site -->
+              <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b63e1d;">
+                <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
+                <span class="px-2 fw-medium">Bilingual Website</span>
+              </a>
+              <!-- GitHub button to project repository -->
+              <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+                <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
+                <span class="px-2 fw-medium">Repository</span>
+              </a>
+            </div>
+            <!-- Overview -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Overview</h3>
+              <p>
+                This project involved using <span class="fw-medium">HTML, CSS, and Bootstrap</span>, improving responsiveness while keeping the desktop layout nearly identical. The website includes an about me page and a feature article in both Mandarin and English. I redesigned the site structure using <span class="fw-medium">cards and modals</span>, making it more mobile-friendly with a <span class="fw-medium">top navigation bar</span> for better usability.
+              </p>
+            </div>
+            <!-- Project Details -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Project Details</h3>
+              <ul class="ms-3">
+                <li><span class="fw-medium">An "About Me" homepage</span>.</li>
+                <li><span class="fw-medium">A feature article on AO3</span>, detailing:
+                  <ul>
+                    <li>The platform’s history.</li>
+                    <li>How to use its filter system effectively.</li>
+                    <li>How to find audiobooks and why AO3 is great for reading novels & learning English.</li>
+                    <li>Recommendations for audiobook creators on AO3.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- Challenges & Solutions -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Challenges & Solutions</h3>
+              <ul class="ms-3">
+                <li><span class="fw-medium">Navigation Issues on Mobile</span> → Show <span class="fw-medium">top navigation bar</span> on smaller screens while keeping the sidebar menu on desktop.</li>
+                <li><span class="fw-medium">Preserving Original Design</span> → Used Bootstrap <span class="fw-medium">cards and modals</span> to match the original layout on desktop while improving responsiveness.</li>
+              </ul>
+            </div>
+            <!-- Key Takeaways -->
+            <div class="row">
+              <h3 class="modal-title fs-5">Key Takeaways</h3>
+              <ul class="ms-3">
+                <li>Improved my <span class="fw-medium">web design</span> skills, particularly in <span class="fw-medium">responsive layouts</span>.</li>
+                <li>Showcased my <span class="fw-medium">bilingual content structuring ability</span>.</li>
+                <li>Enhanced user experience by redesigning navigation on mobile devices.</li>
+                <li>Demonstrated my ability to <span class="fw-medium">explain concepts clearly and concisely</span> through the feature article, making complex information more accessible and user-friendly.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Modal body -->
+      <div class="modal-footer justify-content-between">
+        <span>Nov. 2023- Dec, 2023</span>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Bilingual Website card Modal -->
+
+
+
+
 
           </div>
           <!-- End of project card row -->
