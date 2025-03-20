@@ -568,6 +568,243 @@ Will include the following sections:
           <!-- Project cards row-->
           <div class="row  justify-content-evenly pt-2 gy-3 gy-sm-4">
 
+            <!-- Pending Projects Card -->
+            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="frontend backend database data-science software hackathon">
+              <div class="card-body mx-2">
+                <h5 class="card-title">Pending & Finished Projects</h5>
+                <p class="card-text text-start">
+                  A collection of projects I plan to create its own card and add to my portfolio, including ongoing work and finished projects from hackathons and personal works.
+                </p>
+              </div>
+              
+              <ul class="list-group list-group-flush mx-2 text-start">
+                <!-- Pending Projects -->
+                <h5 class="mt-2 ms-3 mb-1">Pending Projects</h5>
+                <li class="list-group-item">
+                  <span class="fw-medium">Real-Time Room Availability Web App (WIP):</span>
+                  Using React, Node.js, Express.js, and MySQL to develop a web app that displays real-time available study rooms on campus.
+                </li>
+
+                <!-- Finished Projects -->
+                <h5 class="mt-2 ms-3 mb-1">Finished Projects</h5>
+                <li class="list-group-item">
+                  <span class="fw-medium">Hackathon (Oct 2024):</span>
+                  Collaborated with agriculture students to develop a potential solution for automating the cleaning of small animal cages.
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-medium">Hackathon (Mar 2025):</span>
+                  Designed a solution combining software (web app, responsive design) and hardware to help students find available study rooms. This project led to the development of the WIP real-time room availability system.
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-medium">Movie Review Sentiment Classifier:</span>
+                  Built a Naïve Bayes classifier to analyze and classify movie reviews as positive or negative.
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-medium">Synonym Classification Model:</span>
+                  Developed a model that classifies synonyms using vectorization and tokenization techniques.
+                </li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="frontend">
+                  <a href="#projects-section">Frontend</a>
+                </button>
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="backend">
+                  <a href="#projects-section">Backend</a>
+                </button>
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="database">
+                  <a href="#projects-section">Database</a>
+                </button>
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="data-science">
+                  <a href="#projects-section">DataScience</a>
+                </button>
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="software">
+                  <a href="#projects-section">Software</a>
+                </button>
+                <button type="button" class="btn btn-outline-light filter-btn fw-semibold border-3" data-filter="hackathon">
+                  <a href="#projects-section">Hackathon</a>
+                </button>
+              </div>
+            </div>
+            <!-- End of Pending Projects Card -->
+
+            <!-- Bopomofo Model card -->
+            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="data-science">
+              <div class="card-body mx-2">
+                <h5 class="card-title">Bopomofo Character Recognition Model</h5>
+                <p class="card-text text-start">
+                  Developed a <span class="fw-medium">CNN-based machine learning model</span> to recognize Bopomofo phonetic symbols. Collected my own data, including handwriting samples from friends and family and open-source computer fonts, and improved model robustness through <span class="fw-medium">augmentation techniques</span>. Achieved high accuracy (85-100% for computer fonts, 75-85% for handwritten characters) despite working with a small and imbalanced dataset. 
+                </p>
+                <!-- Button to trigger card modal -->
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BopomofoModal">
+                    Learn more
+                  </button>
+                </div>
+              </div> <!-- End of card-body section -->
+              <ul class="list-group list-group-flush mx-2 text-start">
+                <li class="list-group-item fw-medium">
+                  <!-- GitHub button to full notebook -->
+                  <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+                    <img src="assets\icons\github-icon.svg" alt="button with link to full notebook" class="bg-white rounded-1">
+                    <span class="px-2 fw-medium">Full notebook</span>
+                  </a>
+                </li>
+                <li class="list-group-item fw-medium">
+                  Tech: Python | Machine Learning | TensorFlow | OpenCV | Pillow | CNN | Jupyter Notebook
+                </li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="data-science">
+                  <a href="#projects-section">DataScience</a>
+                </button>
+              </div>
+            </div>
+            <!-- End of Bopomofo Model card -->
+
+            <!-- Bopomofo card Modal -->
+            <div class="modal fade" id="BopomofoModal" tabindex="-1" aria-labelledby="BopomofoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content p-3">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-4" id="BopomofoModalLabel">Bopomofo Character Recognition Model</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <div class="container-fluid d-flex justify-content-center">
+                      <div class="col px-3">
+                        <!-- Tech Stack -->
+                        <div class="row">
+                          <p>
+                            <span class="fw-bold">Tech:</span> 
+                            <span class="fw-medium">Python, Machine Learning, TensorFlow, OpenCV, Pillow, CNN, Jupyter Notebook</span>
+                          </p>
+                        </div>
+                        <!-- link to project repositories -->
+                        <div class="row justify-content-evenly">
+                          <!-- GitHub button to full notebook-->
+                          <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                            <img src="assets\icons\github-icon.svg" alt="button with link to full Notebook on github" class="bg-white rounded-1">
+                            <span class="px-2 fw-medium">Full Jupyter Notebook</span>
+                          </a>
+                          <!-- Github button for project repo-->
+                          <a href="https://github.com/white-pub/Bopomofo-Model" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
+                            <img src="assets\icons\github-icon.svg" alt="button with link to project github page" class="bg-white rounded-1">
+                            <span class="px-2 fw-medium">Project Repository</span>
+                          </a>
+                        </div>
+                        <!-- Overview -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Overview</h3>
+                          <p>
+                            This project aims to build a machine-learning model that can recognize <span class="fw-medium">individual Bopomofo symbols</span>. Bopomofo is a phonetic character system used in Taiwan, with limited popularity and research in the machine learning domain. To enhance the model's usefulness, I trained it on both computer fonts and handwritten characters, requiring a well-structured dataset and robust training methods to prevent overfitting.
+                          </p>
+                          <p>
+                            To achieve accurate recognition, I used a <span class="fw-medium">Convolutional Neural Network (CNN)</span>, a type of deep learning model specifically designed for image processing. CNNs excel at recognizing patterns in images by using multiple layers to detect edges, shapes, and complex features, making them well-suited for distinguishing Bopomofo characters despite variations in handwriting and font styles.
+                          </p>
+                          <p class="mb-1">Despite the constraints of a <span class="fw-medium">small and imbalanced dataset</span>—13 computer fonts with varying weights and two handwritten samples—the model achieved impressive results:</p>
+                            <ul class="ms-3 mb-2" style="list-style-type: none;">
+                              <li class="my-0"><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
+                              <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
+                            </ul>
+                          <p>
+                            This highlights the effectiveness of advanced <span class="fw-medium">data augmentation techniques</span> and <span class="fw-medium">balancing strategies</span>. The project demonstrates the feasibility and my ability of achieving high performance in machine learning tasks with limited resources.
+                          </p>
+                        </div>
+                        <!-- Data Collection & Preparation -->
+                        <div class="row">
+                          <h4 class="my-3">Project Details</h4>
+                          <h3 class="modal-title fs-5">Data Collection & Preparation</h3>
+                          <ul class="ms-3">
+                            <li>Gathered a <span class="fw-medium">custom dataset</span> by collecting handwriting samples from friends and family.</li>
+                            <li>Collected <span class="fw-medium">over a dozen open-source computer fonts</span> to improve generalization.</li>
+                            <li>Used the Python library <span class="fw-medium">Pillow</span> to generate individual character images from font files using the ImageFont feature.</li>
+                          </ul>
+                        </div>
+                        <!-- First Attempt -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">First Attempt: Early Training Challenges</h3>
+                          <p>
+                            Initially created training images manually by taking screenshots and splitting them into individual character images.
+                          </p>
+                          <h4 class="fs-6 fw-medium">Issue:</h4>
+                          <ul class="ms-3">
+                            <li>The splitting process caused misalignment, leading to <span class="fw-medium">position-dependent bias</span> in training.</li>
+                            <li>Model performed better on computer fonts (84%) than handwritten samples (65%), suggesting the need for data augmentation to compensate for the smaller sample size of handwritten fonts.</li>
+                            <li>Noticed that <span class="fw-medium">character order in the training set</span> influenced model accuracy—matching order improved accuracy by <span class="fw-medium">10%</span>.</li>
+                          </ul>
+                        </div>
+                        <!-- Second Attempt -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Second Attempt: Improved Training Process</h3>
+                          <ul class="ms-3 ps-3"> <!--🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀 -->
+                            <li class="my-1">
+                              <span class="fw-medium">Automate dataset creation</span> by generating individual character images from font files. Speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
+                            </li>
+                            <li class="my-1">Implemented <span class="fw-medium">data augmentation</span> to improve robustness:
+                              <ul>
+                                <li><span class="fw-medium">Randomized image alignment</span> to prevent position memorization.</li>
+                                <li><span class="fw-medium">Contrast adjustments, slant modifications, and blurring</span> to simulate handwriting variations.</li>
+                              </ul>
+                            </li>
+                            <li class="my-1"><span class="fw-medium">Balanced dataset</span> by categorizing fonts into four types:
+                              <ul>
+                                <li>Even strokes</li>
+                                <li>Dynamic strokes</li>
+                                <li>Heavily stylized fonts</li>
+                                <li>Handwritten samples</li>
+                              </ul>
+                            </li>
+                            <li class="my-1">Used <span class="fw-medium">OpenCV</span> for augmentation and image processing.</li>                
+                            <li class="my-1">
+                              Used Python library Pillow's ImageFont feature to <span class="fw-medium">automate dataset creation</span> by generating individual character images from font files. Greatly speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Results & Performance -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Results & Performance</h3>
+                          <ul class="ms-3">
+                            <li class="my-1">Training epochs reduced from <span class="fw-medium">200</span> to <span class="fw-medium">30</span> while improving accuracy.</li>
+                            <li>Model performance:
+                              <ul class="my-1">
+                                <li><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
+                                <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
+                                <li>More off-centered images still lower accuracy but with less bias.</li>
+                              </ul>
+                            </li>
+                            <li class="my-1">Additional insights:
+                              <ul>
+                                <li>Despite a <span class="fw-medium">small dataset</span> (13 fonts and two handwritten samples), the model achieved <span class="fw-medium">high accuracy rates</span>.</li>
+                                <li>Data augmentation techniques significantly improved model robustness against variations in handwriting and font styles.</li>
+                                <li>Evaluated on entirely new fonts and handwriting samples, the model showcased <span class="fw-medium">excellent generalization</span>, validating its potential for real-world applications.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- What I learned -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">What I Learned</h3>
+                          <ul class="ms-3">
+                            <li>Used Python <span class="fw-medium">Pillow</span> library's ImageFont feature to efficiently generate images of individual characters from font files, significantly improving dataset creation speed and reduce bias.</li>
+                            <li>Leveraged <span class="fw-medium">OpenCV</span> for advanced data augmentation techniques to enhance model robustness.</li>
+                            <li><span class="fw-medium">Importance of balanced and diverse training data</span> for handwritten recognition.</li>
+                            <li><span class="fw-medium">Data augmentation</span> significantly improves model robustness.</li>
+                            <li><span class="fw-medium">Structured folder organization</span> and <span class="fw-medium">automated testing setup</span> is crucial to experiment with different methods and quickly iterate.</li>
+                            <li><span class="fw-medium">Implemented logging with JSON files</span> and <span class="fw-medium">automated modal evaluation visualization</span> is crucial to experiment with different methods and quickly iterate.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- End of Modal body -->
+                  <div class="modal-footer justify-content-between">
+                    Nov. 2024 - Dec. 2024
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Bopomofo card Modal -->
+
             <!-- Mini Database Project card -->
             <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="database">
               <div class="card-body mx-2">
@@ -843,46 +1080,56 @@ Will include the following sections:
             </div>
             <!-- End of Herbarium card Modal -->
 
-            <!-- Bopomofo Model card -->
-            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="data-science">
+            <!-- Bilingual Website card -->
+            <div class="card col-10 col-md-5 px-0 rounded-4" data-tags="software frontend">
               <div class="card-body mx-2">
-                <h5 class="card-title">Bopomofo Character Recognition Model</h5>
+                <h5 class="card-title">Responsive Bilingual Website</h5>
                 <p class="card-text text-start">
-                  Developed a <span class="fw-medium">CNN-based machine learning model</span> to recognize Bopomofo phonetic symbols. Collected my own data, including handwriting samples from friends and family and open-source computer fonts, and improved model robustness through <span class="fw-medium">augmentation techniques</span>. Achieved high accuracy (85-100% for computer fonts, 75-85% for handwritten characters) despite working with a small and imbalanced dataset. 
+                  Rebuilt an older personal bilingual website with <span class="fw-medium">responsive design</span>. Implemented <span class="fw-medium">frontend development techniques</span> as well as optimized performance for various devices. My bilingual website has a feature article that introduced                           <a href="https://archiveofourown.org/" class="btn btn-light info-btn" target="_blank">
+                  <span class="px-2 fw-medium">Archive Our Own</span>
+                  </a> (AO3). I covering its history, its features, and recommendations for creators on AO3. The bilingual nature of my site makes it accessible for both English and non-English speakers. 
                 </p>
                 <!-- Button to trigger card modal -->
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BopomofoModal">
+                  <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BilingualSiteModal">
                     Learn more
                   </button>
                 </div>
               </div> <!-- End of card-body section -->
               <ul class="list-group list-group-flush mx-2 text-start">
                 <li class="list-group-item fw-medium">
-                  <!-- GitHub button to full notebook -->
-                  <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
-                    <img src="assets\icons\github-icon.svg" alt="button with link to full notebook" class="bg-white rounded-1">
-                    <span class="px-2 fw-medium">Full notebook</span>
+                  <!-- GitHub button to bilingual site -->
+                  <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b55034;">
+                    <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
+                    <span class="px-2 fw-medium">Bilingual Website</span>
+                  </a>
+                  <!-- GitHub button to project repository -->
+                  <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+                    <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
+                    <span class="px-2 fw-medium">Repository</span>
                   </a>
                 </li>
                 <li class="list-group-item fw-medium">
-                  Tech: Python | Machine Learning | TensorFlow | OpenCV | Pillow | CNN | Jupyter Notebook
+                  Tech: HTML | CSS | JavaScript | Responsive Design
                 </li>
               </ul>
-              <div class="card-footer">
-                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="data-science">
-                  <a href="#projects-section">DataScience</a>
+              <div class="card-footer aline-middle">
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="software frontend">
+                  <a href="#projects-section">Software</a>
+                </button>
+                <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="frontend">
+                  <a href="#projects-section">Frontend</a>
                 </button>
               </div>
             </div>
-            <!-- End of Bopomofo Model card -->
+            <!-- End of Bilingual Website card -->
 
-            <!-- Bopomofo card Modal -->
-            <div class="modal fade" id="BopomofoModal" tabindex="-1" aria-labelledby="BopomofoModalLabel" aria-hidden="true">
+            <!-- Bilingual Website card Modal -->
+            <div class="modal fade" id="BilingualSiteModal" tabindex="-1" aria-labelledby="BilingualSiteModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content p-3">
                   <div class="modal-header">
-                    <h3 class="modal-title fs-4" id="BopomofoModalLabel">Bopomofo Character Recognition Model</h3>
+                    <h3 class="modal-title fs-4" id="BilingualSiteModalLabel">Responsive Bilingual Website</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body text-start">
@@ -891,262 +1138,74 @@ Will include the following sections:
                         <!-- Tech Stack -->
                         <div class="row">
                           <p>
-                            <span class="fw-bold">Tech:</span> 
-                            <span class="fw-medium">Python, Machine Learning, TensorFlow, OpenCV, Pillow, CNN, Jupyter Notebook</span>
+                            <span class="fw-bold">Tech Stack:</span> 
+                            <span class="fw-medium">HTML, CSS, Bootstrap, Github, Responsive Design</span>
                           </p>
                         </div>
-                        <!-- link to project repositories -->
+                        <!-- GitHub link -->
                         <div class="row justify-content-evenly">
-                          <!-- GitHub button to full notebook-->
-                          <a href="https://github.com/white-pub/Bopomofo-Model/blob/main/Bopomofo_model.ipynb" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
-                            <img src="assets\icons\github-icon.svg" alt="button with link to full Notebook on github" class="bg-white rounded-1">
-                            <span class="px-2 fw-medium">Full Jupyter Notebook</span>
+                          <!-- GitHub button to bilingual site -->
+                          <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b63e1d;">
+                            <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
+                            <span class="px-2 fw-medium">Bilingual Website</span>
                           </a>
-                          <!-- Github button for project repo-->
-                          <a href="https://github.com/white-pub/Bopomofo-Model" class="btn btn-light contact-icon github-icon my-2 col-12 col-lg-5" target="_blank">
-                            <img src="assets\icons\github-icon.svg" alt="button with link to project github page" class="bg-white rounded-1">
-                            <span class="px-2 fw-medium">Project Repository</span>
+                          <!-- GitHub button to project repository -->
+                          <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
+                            <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
+                            <span class="px-2 fw-medium">Repository</span>
                           </a>
                         </div>
                         <!-- Overview -->
                         <div class="row">
                           <h3 class="modal-title fs-5">Overview</h3>
                           <p>
-                            This project aims to build a machine-learning model that can recognize <span class="fw-medium">individual Bopomofo symbols</span>. Bopomofo is a phonetic character system used in Taiwan, with limited popularity and research in the machine learning domain. To enhance the model's usefulness, I trained it on both computer fonts and handwritten characters, requiring a well-structured dataset and robust training methods to prevent overfitting.
-                          </p>
-                          <p>
-                            To achieve accurate recognition, I used a <span class="fw-medium">Convolutional Neural Network (CNN)</span>, a type of deep learning model specifically designed for image processing. CNNs excel at recognizing patterns in images by using multiple layers to detect edges, shapes, and complex features, making them well-suited for distinguishing Bopomofo characters despite variations in handwriting and font styles.
-                          </p>
-                          <p class="mb-1">Despite the constraints of a <span class="fw-medium">small and imbalanced dataset</span>—13 computer fonts with varying weights and two handwritten samples—the model achieved impressive results:</p>
-                            <ul class="ms-3 mb-2" style="list-style-type: none;">
-                              <li class="my-0"><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
-                              <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
-                            </ul>
-                          <p>
-                            This highlights the effectiveness of advanced <span class="fw-medium">data augmentation techniques</span> and <span class="fw-medium">balancing strategies</span>. The project demonstrates the feasibility and my ability of achieving high performance in machine learning tasks with limited resources.
+                            This project involved using <span class="fw-medium">HTML, CSS, and Bootstrap</span>, improving responsiveness while keeping the desktop layout nearly identical. The website includes an about me page and a feature article in both Mandarin and English. I redesigned the site structure using <span class="fw-medium">cards and modals</span>, making it more mobile-friendly with a <span class="fw-medium">top navigation bar</span> for better usability.
                           </p>
                         </div>
-                        <!-- Data Collection & Preparation -->
+                        <!-- Project Details -->
                         <div class="row">
-                          <h4 class="my-3">Project Details</h4>
-                          <h3 class="modal-title fs-5">Data Collection & Preparation</h3>
+                          <h3 class="modal-title fs-5">Project Details</h3>
                           <ul class="ms-3">
-                            <li>Gathered a <span class="fw-medium">custom dataset</span> by collecting handwriting samples from friends and family.</li>
-                            <li>Collected <span class="fw-medium">over a dozen open-source computer fonts</span> to improve generalization.</li>
-                            <li>Used the Python library <span class="fw-medium">Pillow</span> to generate individual character images from font files using the ImageFont feature.</li>
-                          </ul>
-                        </div>
-                        <!-- First Attempt -->
-                        <div class="row">
-                          <h3 class="modal-title fs-5">First Attempt: Early Training Challenges</h3>
-                          <p>
-                            Initially created training images manually by taking screenshots and splitting them into individual character images.
-                          </p>
-                          <h4 class="fs-6 fw-medium">Issue:</h4>
-                          <ul class="ms-3">
-                            <li>The splitting process caused misalignment, leading to <span class="fw-medium">position-dependent bias</span> in training.</li>
-                            <li>Model performed better on computer fonts (84%) than handwritten samples (65%), suggesting the need for data augmentation to compensate for the smaller sample size of handwritten fonts.</li>
-                            <li>Noticed that <span class="fw-medium">character order in the training set</span> influenced model accuracy—matching order improved accuracy by <span class="fw-medium">10%</span>.</li>
-                          </ul>
-                        </div>
-                        <!-- Second Attempt -->
-                        <div class="row">
-                          <h3 class="modal-title fs-5">Second Attempt: Improved Training Process</h3>
-                          <ul class="ms-3 ps-3"> <!--🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀 -->
-                            <li class="my-1">
-                              <span class="fw-medium">Automate dataset creation</span> by generating individual character images from font files. Speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
-                            </li>
-                            <li class="my-1">Implemented <span class="fw-medium">data augmentation</span> to improve robustness:
+                            <li><span class="fw-medium">An "About Me" homepage</span>.</li>
+                            <li><span class="fw-medium">A feature article on AO3</span>, detailing:
                               <ul>
-                                <li><span class="fw-medium">Randomized image alignment</span> to prevent position memorization.</li>
-                                <li><span class="fw-medium">Contrast adjustments, slant modifications, and blurring</span> to simulate handwriting variations.</li>
-                              </ul>
-                            </li>
-                            <li class="my-1"><span class="fw-medium">Balanced dataset</span> by categorizing fonts into four types:
-                              <ul>
-                                <li>Even strokes</li>
-                                <li>Dynamic strokes</li>
-                                <li>Heavily stylized fonts</li>
-                                <li>Handwritten samples</li>
-                              </ul>
-                            </li>
-                            <li class="my-1">Used <span class="fw-medium">OpenCV</span> for augmentation and image processing.</li>                
-                            <li class="my-1">
-                              Used Python library Pillow's ImageFont feature to <span class="fw-medium">automate dataset creation</span> by generating individual character images from font files. Greatly speeding up preprocessing and avoiding aliment issue in manual screenshot causing bias.
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- Results & Performance -->
-                        <div class="row">
-                          <h3 class="modal-title fs-5">Results & Performance</h3>
-                          <ul class="ms-3">
-                            <li class="my-1">Training epochs reduced from <span class="fw-medium">200</span> to <span class="fw-medium">30</span> while improving accuracy.</li>
-                            <li>Model performance:
-                              <ul class="my-1">
-                                <li><span class="fw-medium">Computer fonts:</span> 85-100% accuracy</li>
-                                <li><span class="fw-medium">Handwritten characters:</span> 75-85% accuracy</li>
-                                <li>More off-centered images still lower accuracy but with less bias.</li>
-                              </ul>
-                            </li>
-                            <li class="my-1">Additional insights:
-                              <ul>
-                                <li>Despite a <span class="fw-medium">small dataset</span> (13 fonts and two handwritten samples), the model achieved <span class="fw-medium">high accuracy rates</span>.</li>
-                                <li>Data augmentation techniques significantly improved model robustness against variations in handwriting and font styles.</li>
-                                <li>Evaluated on entirely new fonts and handwriting samples, the model showcased <span class="fw-medium">excellent generalization</span>, validating its potential for real-world applications.</li>
+                                <li>The platform’s history.</li>
+                                <li>How to use its filter system effectively.</li>
+                                <li>How to find audiobooks and why AO3 is great for reading novels & learning English.</li>
+                                <li>Recommendations for audiobook creators on AO3.</li>
                               </ul>
                             </li>
                           </ul>
                         </div>
-                        <!-- What I learned -->
+                        <!-- Challenges & Solutions -->
                         <div class="row">
-                          <h3 class="modal-title fs-5">What I Learned</h3>
+                          <h3 class="modal-title fs-5">Challenges & Solutions</h3>
                           <ul class="ms-3">
-                            <li>Used Python <span class="fw-medium">Pillow</span> library's ImageFont feature to efficiently generate images of individual characters from font files, significantly improving dataset creation speed and reduce bias.</li>
-                            <li>Leveraged <span class="fw-medium">OpenCV</span> for advanced data augmentation techniques to enhance model robustness.</li>
-                            <li><span class="fw-medium">Importance of balanced and diverse training data</span> for handwritten recognition.</li>
-                            <li><span class="fw-medium">Data augmentation</span> significantly improves model robustness.</li>
-                            <li><span class="fw-medium">Structured folder organization</span> and <span class="fw-medium">automated testing setup</span> is crucial to experiment with different methods and quickly iterate.</li>
-                            <li><span class="fw-medium">Implemented logging with JSON files</span> and <span class="fw-medium">automated modal evaluation visualization</span> is crucial to experiment with different methods and quickly iterate.</li>
+                            <li><span class="fw-medium">Navigation Issues on Mobile</span> → Show <span class="fw-medium">top navigation bar</span> on smaller screens while keeping the sidebar menu on desktop.</li>
+                            <li><span class="fw-medium">Preserving Original Design</span> → Used Bootstrap <span class="fw-medium">cards and modals</span> to match the original layout on desktop while improving responsiveness.</li>
+                          </ul>
+                        </div>
+                        <!-- Key Takeaways -->
+                        <div class="row">
+                          <h3 class="modal-title fs-5">Key Takeaways</h3>
+                          <ul class="ms-3">
+                            <li>Improved my <span class="fw-medium">web design</span> skills, particularly in <span class="fw-medium">responsive layouts</span>.</li>
+                            <li>Showcased my <span class="fw-medium">bilingual content structuring ability</span>.</li>
+                            <li>Enhanced user experience by redesigning navigation on mobile devices.</li>
+                            <li>Demonstrated my ability to <span class="fw-medium">explain concepts clearly and concisely</span> through the feature article, making complex information more accessible and user-friendly.</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                   </div> <!-- End of Modal body -->
                   <div class="modal-footer justify-content-between">
-                    Nov. 2024 - Dec. 2024
+                    <span>Nov. 2023- Dec, 2023</span>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End of Bopomofo card Modal -->
-
-            <!-- Bilingual Website card -->
-<div class="card col-10 col-md-5 px-0 rounded-4" data-tags="software frontend">
-  <div class="card-body mx-2">
-    <h5 class="card-title">Responsive Bilingual Website</h5>
-    <p class="card-text text-start">
-      Rebuilt an older personal bilingual website with <span class="fw-medium">responsive design</span>. Implemented <span class="fw-medium">frontend development techniques</span> as well as optimized performance for various devices. My bilingual website has a feature article that introduced                           <a href="https://archiveofourown.org/" class="btn btn-light info-btn" target="_blank">
-      <span class="px-2 fw-medium">Archive Our Own</span>
-      </a> (AO3). I covering its history, its features, and recommendations for creators on AO3. The bilingual nature of my site makes it accessible for both English and non-English speakers. 
-    </p>
-    <!-- Button to trigger card modal -->
-    <div class="text-center">
-      <button type="button" class="btn btn-primary learn-more-btn fw-semibold border-3" data-bs-toggle="modal" data-bs-target="#BilingualSiteModal">
-        Learn more
-      </button>
-    </div>
-  </div> <!-- End of card-body section -->
-  <ul class="list-group list-group-flush mx-2 text-start">
-    <li class="list-group-item fw-medium">
-      <!-- GitHub button to bilingual site -->
-      <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b55034;">
-        <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
-        <span class="px-2 fw-medium">Bilingual Website</span>
-      </a>
-      <!-- GitHub button to project repository -->
-      <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
-        <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
-        <span class="px-2 fw-medium">Repository</span>
-      </a>
-    </li>
-    <li class="list-group-item fw-medium">
-      Tech: HTML | CSS | JavaScript | Responsive Design
-    </li>
-  </ul>
-  <div class="card-footer aline-middle">
-    <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="software frontend">
-      <a href="#projects-section">Software</a>
-    </button>
-    <button type="button" class="btn filter-btn fw-semibold border-3" data-filter="frontend">
-      <a href="#projects-section">Frontend</a>
-    </button>
-  </div>
-</div>
-<!-- End of Bilingual Website card -->
-
-<!-- Bilingual Website card Modal -->
-<div class="modal fade" id="BilingualSiteModal" tabindex="-1" aria-labelledby="BilingualSiteModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content p-3">
-      <div class="modal-header">
-        <h3 class="modal-title fs-4" id="BilingualSiteModalLabel">Responsive Bilingual Website</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-start">
-        <div class="container-fluid d-flex justify-content-center">
-          <div class="col px-3">
-            <!-- Tech Stack -->
-            <div class="row">
-              <p>
-                <span class="fw-bold">Tech Stack:</span> 
-                <span class="fw-medium">HTML, CSS, Bootstrap, Github, Responsive Design</span>
-              </p>
-            </div>
-            <!-- GitHub link -->
-            <div class="row justify-content-evenly">
-              <!-- GitHub button to bilingual site -->
-              <a href="https://white-pub.github.io/m.personal/featured_article_en.html" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank" style="background-color: #fbf1ee; border-color: #b63e1d;">
-                <span class="bg-white rounded-1 pt-1 m-0" style="width: 30px; height: 30px;">🔥</span>
-                <span class="px-2 fw-medium">Bilingual Website</span>
-              </a>
-              <!-- GitHub button to project repository -->
-              <a href="https://github.com/white-pub/white-pub.github.io/tree/mobile-friendly/m.personal" class="btn btn-light contact-icon github-icon my-2 me-2" target="_blank">
-                <img src="assets\icons\github-icon.svg" alt="button with link to project repository" class="bg-white rounded-1">
-                <span class="px-2 fw-medium">Repository</span>
-              </a>
-            </div>
-            <!-- Overview -->
-            <div class="row">
-              <h3 class="modal-title fs-5">Overview</h3>
-              <p>
-                This project involved using <span class="fw-medium">HTML, CSS, and Bootstrap</span>, improving responsiveness while keeping the desktop layout nearly identical. The website includes an about me page and a feature article in both Mandarin and English. I redesigned the site structure using <span class="fw-medium">cards and modals</span>, making it more mobile-friendly with a <span class="fw-medium">top navigation bar</span> for better usability.
-              </p>
-            </div>
-            <!-- Project Details -->
-            <div class="row">
-              <h3 class="modal-title fs-5">Project Details</h3>
-              <ul class="ms-3">
-                <li><span class="fw-medium">An "About Me" homepage</span>.</li>
-                <li><span class="fw-medium">A feature article on AO3</span>, detailing:
-                  <ul>
-                    <li>The platform’s history.</li>
-                    <li>How to use its filter system effectively.</li>
-                    <li>How to find audiobooks and why AO3 is great for reading novels & learning English.</li>
-                    <li>Recommendations for audiobook creators on AO3.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!-- Challenges & Solutions -->
-            <div class="row">
-              <h3 class="modal-title fs-5">Challenges & Solutions</h3>
-              <ul class="ms-3">
-                <li><span class="fw-medium">Navigation Issues on Mobile</span> → Show <span class="fw-medium">top navigation bar</span> on smaller screens while keeping the sidebar menu on desktop.</li>
-                <li><span class="fw-medium">Preserving Original Design</span> → Used Bootstrap <span class="fw-medium">cards and modals</span> to match the original layout on desktop while improving responsiveness.</li>
-              </ul>
-            </div>
-            <!-- Key Takeaways -->
-            <div class="row">
-              <h3 class="modal-title fs-5">Key Takeaways</h3>
-              <ul class="ms-3">
-                <li>Improved my <span class="fw-medium">web design</span> skills, particularly in <span class="fw-medium">responsive layouts</span>.</li>
-                <li>Showcased my <span class="fw-medium">bilingual content structuring ability</span>.</li>
-                <li>Enhanced user experience by redesigning navigation on mobile devices.</li>
-                <li>Demonstrated my ability to <span class="fw-medium">explain concepts clearly and concisely</span> through the feature article, making complex information more accessible and user-friendly.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End of Modal body -->
-      <div class="modal-footer justify-content-between">
-        <span>Nov. 2023- Dec, 2023</span>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End of Bilingual Website card Modal -->
+            <!-- End of Bilingual Website card Modal -->
 
 
 
